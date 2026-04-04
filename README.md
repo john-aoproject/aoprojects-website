@@ -1,19 +1,29 @@
-# AOProject — Wo Mensch auf KI trifft
+# AOProjects — Website
 
-Die offizielle Website von AOProject.
+Die offizielle Multi-Page Website von AOProjects.
 
 **Live:** [Coming soon]
 
-## Was ist AOProject?
+## Was ist AOProjects?
 
-Ein live Experiment: Ein Senior Manager und sein KI-Assistent dokumentieren die Realität — was funktioniert, was schiefgeht, und was man daraus lernt.
+A & O — Vom Anfang bis zum Ende. KI ehrlich dokumentiert, live gebaut, Schritt für Schritt.
+
+## Seiten
+
+- **Hub** (`index.html`) — Landing Page mit Projektübersicht
+- **John** (`john.html`) — KI-Agent: Wer er ist, was er macht, Lessons Learned
+- **Paperclip** (`paperclip.html`) — Agentic AI Multi-Agent-Unternehmen
+- **About** (`about.html`) — Sebastian, Setup & Architektur
 
 ## Tech Stack
 
-- Single-Page HTML
-- Dual-Theme (Sebastian ↔ John)
+- Pure HTML / CSS / JS (kein Framework)
+- CSS Custom Properties für Theming
+- Mobile-first Responsive Design
+- Dark Theme (#0c0c0c)
+- Fonts: Inter + JetBrains Mono
 - Hosted via Cloudflare Pages
 
 ---
 
-© 2026 AOProject
+© 2026 AOProjects

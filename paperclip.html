@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="de" class="theme-paperclip">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paperclip — AO Projects</title>
+<meta name="description" content="Paperclip — Vorgefertigte Multi-Agent-Unternehmen testen. Setup, Companies und Learnings.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index_new.html" class="nav-logo">
+      <img src="assets/logo-256.png" alt="AO Projects Logo">
+      <span>AO Projects</span>
+    </a>
+    <div class="nav-links">
+      <a href="john.html">John</a>
+      <a href="paperclip.html" class="active">Paperclip</a>
+      <a href="about.html">About</a>
+    </div>
+    <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu">
+  <a href="index_new.html" onclick="this.parentElement.classList.remove('open')">Home</a>
+  <a href="john.html" onclick="this.parentElement.classList.remove('open')">John</a>
+  <a href="paperclip.html" onclick="this.parentElement.classList.remove('open')">Paperclip</a>
+  <a href="about.html" onclick="this.parentElement.classList.remove('open')">About</a>
+</div>
+
+<!-- Hero -->
+<section class="subpage-hero">
+  <div class="container">
+    <div class="avatar-wrap">
+      <img src="assets/paperclip-avatar.png" alt="Paperclip — Agentic AI">
+    </div>
+    <h1>Paperclip</h1>
+    <p class="subtitle">Agentic AI. Multi-Agent-Unternehmen.</p>
+  </div>
+</section>
+
+<!-- Was ist Paperclip -->
+<section class="content-section">
+  <div class="container">
+    <span class="section-label fade-in">Open Source</span>
+    <h2 class="section-title fade-in">Was ist Paperclip?</h2>
+    <p class="section-text fade-in" style="text-align:center; margin-bottom:24px; font-style:italic; color:var(--gold);">Agentic AI in der Praxis. Vorgefertigte Multi-Agent-Unternehmen. Ein Experiment mit echten Learnings.</p>
+    <div class="section-text fade-in">
+      <p>Paperclip ist ein Open-Source-Framework für sogenannte "Zero-Human Companies" — vollständig KI-gesteuerte Organisationen. Die Idee: Kann man ein Unternehmen aufsetzen, in dem KI-Agents alle Rollen übernehmen?</p>
+      <p>Das Framework bringt vorgefertigte Unternehmens-Templates mit. Jedes Template definiert Agents mit Rollen, Skills und Zielen. Die Agents kommunizieren untereinander, treffen Entscheidungen und liefern Ergebnisse.</p>
+      <p>Für AO Projects ist Paperclip das Experimentierfeld: Ich nehme die Templates, setze sie auf und dokumentiere, was funktioniert — und was nicht.</p>
+    </div>
+    <div class="fade-in" style="margin-top:24px;">
+      <a href="https://github.com/paperclipai/paperclip" target="_blank" rel="noopener" class="github-link">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        Paperclip auf GitHub ansehen &rarr;
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Wie ich es eingerichtet habe -->
+<section class="content-section">
+  <div class="container">
+    <span class="section-label fade-in">Setup</span>
+    <h2 class="section-title fade-in">Wie ich Paperclip eingerichtet habe.</h2>
+    <div class="section-text fade-in">
+      <p>Das Aufsetzen von Paperclip war kein Plug-and-Play. Die Installation selbst ist unkompliziert, aber das Framework richtig zum Laufen zu bringen — mit funktionierenden Companies und sauber konfigurierten Agents — hat einiges an Arbeit gekostet.</p>
+      <p>Der erste Ansatz war, die Skills manuell nachzubauen. Das hat nicht funktioniert. Die Skill-Architektur ist komplexer als sie auf den ersten Blick wirkt, und ohne die richtigen Abhängigkeiten und Konfigurationen laufen die Agents ins Leere.</p>
+      <p>Die Lösung: Ich habe den MCP-Server für die ClawTeam Capital aufgesetzt. Das war der Durchbruch — damit konnten die Agents auf externe Datenquellen zugreifen und die Skills richtig nutzen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Companies -->
+<section class="content-section">
+  <div class="container">
+    <span class="section-label fade-in">Companies</span>
+    <h2 class="section-title fade-in">Die Unternehmen im Test.</h2>
+
+    <!-- ClawTeam Capital -->
+    <div class="detail-card fade-in">
+      <span class="badge">KI-Company #1</span>
+      <h3>ClawTeam Capital — Finance Report</h3>
+      <p>Eine vollständig KI-gesteuerte Investment-Analyse-Firma. 7 spezialisierte Agents arbeiten zusammen an strukturierten Finance Reports.</p>
+      <div class="setup-grid" style="margin-top:20px; margin-bottom:20px;">
+        <div class="setup-item">
+          <div class="setup-item-title">Fundamental</div>
+          <div class="setup-item-desc">Bilanzanalyse, Kennzahlen</div>
+        </div>
+        <div class="setup-item">
+          <div class="setup-item-title">Technical</div>
+          <div class="setup-item-desc">Charts, Trends, Indikatoren</div>
+        </div>
+        <div class="setup-item">
+          <div class="setup-item-title">Sentiment</div>
+          <div class="setup-item-desc">News, Social Media</div>
+        </div>
+        <div class="setup-item">
+          <div class="setup-item-title">Risk</div>
+          <div class="setup-item-desc">Szenarien, Stress-Tests</div>
+        </div>
+        <div class="setup-item">
+          <div class="setup-item-title">Macro</div>
+          <div class="setup-item-desc">Wirtschaft, Zinsen, Geopolitik</div>
+        </div>
+        <div class="setup-item">
+          <div class="setup-item-title">Portfolio</div>
+          <div class="setup-item-desc">Allokation, Rebalancing</div>
+        </div>
+        <div class="setup-item">
+          <div class="setup-item-title">Report</div>
+          <div class="setup-item-desc">Zusammenführung, Empfehlung</div>
+        </div>
+      </div>
+      <p><strong>Besonderheit:</strong> Für ClawTeam Capital habe ich den MCP-Server aufgesetzt, damit die Agents auf Live-Marktdaten zugreifen können. Vorher habe ich versucht, die Skills manuell zu konfigurieren — das war der falsche Weg. Das vorgefertigte Template liefert die richtige Architektur mit.</p>
+      <p style="margin-top:12px;"><strong>Status:</strong> Phase 1 — Erste Testläufe. Ergebnisse werden hier dokumentiert.</p>
+      <a href="https://github.com/paperclipai/companies" target="_blank" rel="noopener" class="link">Auf GitHub ansehen &rarr;</a>
+    </div>
+
+    <!-- Product Compass Consulting -->
+    <div class="detail-card fade-in">
+      <span class="badge">KI-Company #2</span>
+      <h3>Product Compass Consulting</h3>
+      <p>Enterprise-Level KI-Consulting als vollautomatische Organisation. 48 Agents mit 65 spezialisierten Skills. Teams für GTM-Strategie, Competitive Analysis, Market Sizing und Pricing-Modelle.</p>
+      <div class="section-text" style="margin-top:16px;">
+        <p>Die Idee: Was wäre, wenn eine Beratungsfirma komplett von KI-Agents betrieben würde? Product Compass testet genau das — mit dem Anspruch, strukturierte Deliverables mit Quellenangaben und Executive Summaries zu liefern.</p>
+      </div>
+      <p style="margin-top:16px;"><strong>Status:</strong> In Arbeit — Setup abgeschlossen, erste Aufträge laufen.</p>
+      <a href="https://github.com/paperclipai/companies" target="_blank" rel="noopener" class="link">Auf GitHub ansehen &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- Lessons Learned -->
+<section class="content-section">
+  <div class="container">
+    <span class="section-label fade-in">Lessons Learned</span>
+    <h2 class="section-title fade-in">Was ich gelernt habe.</h2>
+
+    <div class="lessons-grid">
+      <div class="lesson-item fade-in">
+        <span class="lesson-number">01</span>
+        <h4>Blind kopieren ist keine Option</h4>
+        <p>Mein erster Versuch war, die Paperclip-Skills einfach zu übernehmen. Das hat nicht funktioniert — die Ergebnisse waren unbrauchbar. Also habe ich den Code von John prüfen lassen. Dabei wurde ein infizierter Skill entdeckt, der unerwünschtes Verhalten zeigte. Ohne diese Prüfung hätte ich das nie gefunden. Das bestätigt die Methode: Nie etwas blind installieren, sondern prüfen lassen und verstehen, bevor es ins eigene Setup kommt.</p>
+      </div>
+
+      <div class="lesson-item fade-in">
+        <span class="lesson-number">02</span>
+        <h4>MCP-Server ist der Schlüssel</h4>
+        <p>Ohne den MCP-Server konnten die Finance-Agents keine Live-Daten abrufen. Das Setup war nicht trivial — die Konfiguration der API-Endpoints und die Authentifizierung haben mehrere Anläufe gebraucht. Aber sobald der MCP-Server lief, funktionierte alles deutlich besser.</p>
+      </div>
+
+      <div class="lesson-item fade-in">
+        <span class="lesson-number">03</span>
+        <h4>Multi-Agent-Koordination ist das eigentliche Problem</h4>
+        <p>Die einzelnen Agents zum Laufen zu bringen war machbar. Aber 7 Agents so zu orchestrieren, dass sie sinnvoll zusammenarbeiten, Ergebnisse korrekt weitergeben und am Ende ein konsistentes Gesamtbild liefern — das ist eine völlig andere Herausforderung. Die meisten Fehler entstehen nicht in den Skills selbst, sondern in den Übergaben zwischen Agents.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ergebnisse -->
+<section class="content-section">
+  <div class="container">
+    <span class="section-label fade-in">Ergebnisse</span>
+    <h2 class="section-title fade-in">Was dabei raus kam.</h2>
+    <div class="section-text fade-in">
+      <p>Dieser Bereich wird laufend aktualisiert, sobald die ersten Ergebnisse aus ClawTeam Capital und Product Compass vorliegen. Transparenz ist der Kern dieses Projekts — auch wenn Ergebnisse mal nicht glaenzen.</p>
+    </div>
+    <div class="fade-in" style="margin-top:24px;">
+      <img src="assets/img-paperclip-updates.png" alt="Paperclip Ergebnisse — Visualisierung" style="width:100%; border-radius:12px; border:1px solid rgba(255,255,255,0.06);">
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://de.linkedin.com/in/sebastian-linzmair-712623205" target="_blank" rel="noopener">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://github.com/john-aoproject" target="_blank" rel="noopener">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        GitHub
+      </a>
+      <a href="https://discord.com/users/1106100583817039992" target="_blank" rel="noopener">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/></svg>
+        Discord
+      </a>
+    </div>
+    <p class="footer-copy">&copy; 2026 AO Projects. Gebaut mit KI, betrieben von Menschen.</p>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

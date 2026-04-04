@@ -1,0 +1,271 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 780" width="1600" height="780">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap');
+      text { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+    </style>
+    <marker id="arrow-gold" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#c8a44e"/>
+    </marker>
+    <marker id="arrow-grey" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="780" fill="#0c0c0c"/>
+
+  <!-- Title -->
+  <text x="800" y="32" text-anchor="middle" fill="#c8a44e" font-size="17" font-weight="700" letter-spacing="4">AO PROJECTS · PERSONAL AI STACK · 2026</text>
+
+  <!-- ============================================ -->
+  <!-- MAC MINI OUTER DASHED BOX (gold - infra)     -->
+  <!-- ============================================ -->
+  <rect x="30" y="46" width="1160" height="680" rx="10" fill="none" stroke="#c8a44e" stroke-width="1.5" stroke-dasharray="8,4" opacity="0.5"/>
+  <text x="610" y="66" text-anchor="middle" fill="#777" font-size="13" font-weight="500" letter-spacing="3">MAC MINI · APPLE SILICON M4 · 24/7</text>
+
+  <!-- ============================================ -->
+  <!-- OPENCLAW BLOCK (rot = core)                  -->
+  <!-- ============================================ -->
+  <rect x="50" y="78" width="620" height="596" rx="8" fill="#131313" stroke="#c62828" stroke-width="2"/>
+  <text x="360" y="102" text-anchor="middle" fill="#c62828" font-size="17" font-weight="700" letter-spacing="3">OPENCLAW</text>
+  <text x="360" y="119" text-anchor="middle" fill="#888" font-size="11" font-weight="400">Self-Hosted KI-Framework · Lokale Steuerung</text>
+
+  <!-- John Agent Box (rot = core) -->
+  <rect x="68" y="132" width="220" height="78" rx="6" fill="#161616" stroke="#c62828" stroke-width="1.2"/>
+  <text x="178" y="154" text-anchor="middle" fill="#f0f0f0" font-size="15" font-weight="700">JOHN</text>
+  <text x="178" y="172" text-anchor="middle" fill="#aaa" font-size="11">KI-Agent · Ich-Perspektive</text>
+  <text x="178" y="188" text-anchor="middle" fill="#777" font-size="10">Powered by Claude Opus 4.6</text>
+  <text x="178" y="203" text-anchor="middle" fill="#666" font-size="9">Identity-driven · Session-basiert</text>
+
+  <!-- Claude Code Box (rot = core) -->
+  <rect x="304" y="132" width="220" height="78" rx="6" fill="#161616" stroke="#c62828" stroke-width="1.2"/>
+  <text x="414" y="154" text-anchor="middle" fill="#f0f0f0" font-size="14" font-weight="700">CLAUDE CODE</text>
+  <text x="414" y="172" text-anchor="middle" fill="#aaa" font-size="11">Terminal · Agent SDK</text>
+  <text x="414" y="188" text-anchor="middle" fill="#777" font-size="10">Code-Entwicklung</text>
+  <text x="414" y="203" text-anchor="middle" fill="#666" font-size="9">Direkte CLI-Integration</text>
+
+  <!-- OpenClaw-RL Box (rot dashed = core, experimental) -->
+  <rect x="540" y="132" width="116" height="78" rx="6" fill="#161616" stroke="#c62828" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="598" y="155" text-anchor="middle" fill="#f0f0f0" font-size="11" font-weight="600">OpenClaw-RL</text>
+  <text x="598" y="170" text-anchor="middle" fill="#aaa" font-size="10">Learning Layer</text>
+  <text x="598" y="185" text-anchor="middle" fill="#777" font-size="9">Feedback Loop</text>
+  <text x="598" y="200" text-anchor="middle" fill="#666" font-size="9">Continuous Impr.</text>
+
+  <!-- Skills Grid (rot = core) -->
+  <rect x="68" y="222" width="588" height="118" rx="6" fill="#131313" stroke="#c62828" stroke-width="1"/>
+  <text x="362" y="240" text-anchor="middle" fill="#c62828" font-size="12" font-weight="600" letter-spacing="2">SKILLS · 20+</text>
+
+  <!-- Skill boxes row 1 -->
+  <rect x="80" y="250" width="94" height="30" rx="4" fill="#1a1a1a" stroke="#444" stroke-width="0.5"/>
+  <text x="127" y="270" text-anchor="middle" fill="#ccc" font-size="10" font-weight="500">Morning Brief</text>
+
+  <rect x="182" y="250" width="78" height="30" rx="4" fill="#1a1a1a" stroke="#444" stroke-width="0.5"/>
+  <text x="221" y="270" text-anchor="middle" fill="#ccc" font-size="10" font-weight="500">LinkedIn</text>
+
+  <rect x="268" y="250" width="72" height="30" rx="4" fill="#1a1a1a" stroke="#444" stroke-width="0.5"/>
+  <text x="304" y="270" text-anchor="middle" fill="#ccc" font-size="10" font-weight="500">Coding</text>
+
+  <rect x="348" y="250" width="78" height="30" rx="4" fill="#1a1a1a" stroke="#444" stroke-width="0.5"/>
+  <text x="387" y="270" text-anchor="middle" fill="#ccc" font-size="10" font-weight="500">Calendar</text>
+
+  <rect x="434" y="250" width="76" height="30" rx="4" fill="#1a1a1a" stroke="#444" stroke-width="0.5"/>
+  <text x="472" y="270" text-anchor="middle" fill="#ccc" font-size="10" font-weight="500">Weather</text>
+
+  <rect x="518" y="250" width="96" height="30" rx="4" fill="#1a1a1a" stroke="#444" stroke-width="0.5"/>
+  <text x="566" y="270" text-anchor="middle" fill="#ccc" font-size="10" font-weight="500">Automation</text>
+
+  <!-- Skill boxes row 2 -->
+  <rect x="80" y="288" width="76" height="30" rx="4" fill="#1a1a1a" stroke="#444" stroke-width="0.5"/>
+  <text x="118" y="308" text-anchor="middle" fill="#ccc" font-size="10" font-weight="500">Whisper</text>
+
+  <rect x="164" y="288" width="72" height="30" rx="4" fill="#1a1a1a" stroke="#444" stroke-width="0.5"/>
+  <text x="200" y="308" text-anchor="middle" fill="#ccc" font-size="10" font-weight="500">Design</text>
+
+  <rect x="244" y="288" width="88" height="30" rx="4" fill="#1a1a1a" stroke="#444" stroke-width="0.5"/>
+  <text x="288" y="308" text-anchor="middle" fill="#ccc" font-size="10" font-weight="500">Recherche</text>
+
+  <rect x="340" y="288" width="66" height="30" rx="4" fill="#1a1a1a" stroke="#444" stroke-width="0.5"/>
+  <text x="373" y="308" text-anchor="middle" fill="#ccc" font-size="10" font-weight="500">Email</text>
+
+  <rect x="414" y="288" width="74" height="30" rx="4" fill="#1a1a1a" stroke="#444" stroke-width="0.5"/>
+  <text x="451" y="308" text-anchor="middle" fill="#ccc" font-size="10" font-weight="500">Kanban</text>
+
+  <rect x="496" y="288" width="92" height="30" rx="4" fill="#1a1a1a" stroke="#444" stroke-width="0.5"/>
+  <text x="542" y="308" text-anchor="middle" fill="#ccc" font-size="10" font-weight="500">Summarize</text>
+
+  <text x="620" y="308" text-anchor="middle" fill="#888" font-size="11" font-weight="500">+ weitere</text>
+
+  <!-- Persistence Layer (rot = core) -->
+  <rect x="68" y="352" width="286" height="72" rx="6" fill="#161616" stroke="#c62828" stroke-width="1"/>
+  <text x="211" y="374" text-anchor="middle" fill="#f0f0f0" font-size="13" font-weight="600">PERSISTENCE LAYER</text>
+  <text x="211" y="392" text-anchor="middle" fill="#aaa" font-size="11">Memory · User Files · Identity</text>
+  <text x="211" y="408" text-anchor="middle" fill="#777" font-size="10">Persistenter Kontext ueber Sessions</text>
+
+  <!-- User Files (rot = core) -->
+  <rect x="370" y="352" width="286" height="72" rx="6" fill="#161616" stroke="#c62828" stroke-width="1"/>
+  <text x="513" y="374" text-anchor="middle" fill="#f0f0f0" font-size="13" font-weight="600">USER FILES</text>
+  <text x="513" y="392" text-anchor="middle" fill="#aaa" font-size="11">IDENTITY.md · Tonalitaet · Praeferenzen</text>
+  <text x="513" y="408" text-anchor="middle" fill="#777" font-size="10">Werte · Routinen · Kontakt-Regeln</text>
+
+  <!-- Skill-System (rot = core) -->
+  <rect x="68" y="436" width="286" height="60" rx="6" fill="#161616" stroke="#c62828" stroke-width="1"/>
+  <text x="211" y="458" text-anchor="middle" fill="#f0f0f0" font-size="12" font-weight="600">SKILL-SYSTEM</text>
+  <text x="211" y="474" text-anchor="middle" fill="#aaa" font-size="10">Jeder Skill = spezialisiertes Modul</text>
+  <text x="211" y="488" text-anchor="middle" fill="#777" font-size="10">Nachgebaut statt kopiert (Sicherheit)</text>
+
+  <!-- Sessions (rot = core) -->
+  <rect x="370" y="436" width="286" height="60" rx="6" fill="#161616" stroke="#c62828" stroke-width="0.8"/>
+  <text x="513" y="456" text-anchor="middle" fill="#f0f0f0" font-size="11" font-weight="600">SESSIONS</text>
+  <text x="513" y="472" text-anchor="middle" fill="#aaa" font-size="10">Sessions starten leer</text>
+  <text x="513" y="488" text-anchor="middle" fill="#aaa" font-size="10">Memory einlesen ist der Schluessel</text>
+
+  <!-- ============================================ -->
+  <!-- METACLAW BLOCK (gold = infrastructure)       -->
+  <!-- ============================================ -->
+  <rect x="690" y="78" width="480" height="140" rx="8" fill="#131313" stroke="#c8a44e" stroke-width="2"/>
+  <text x="930" y="102" text-anchor="middle" fill="#c8a44e" font-size="17" font-weight="700" letter-spacing="3">METACLAW</text>
+  <text x="930" y="119" text-anchor="middle" fill="#888" font-size="11" font-weight="400">FastAPI Proxy · OpenClaw Extension · Python venv</text>
+
+  <!-- MetaClaw function boxes (corrected: 3 actual functions) -->
+  <rect x="708" y="132" width="140" height="46" rx="5" fill="#1a1a1a" stroke="#c8a44e" stroke-width="0.6"/>
+  <text x="778" y="153" text-anchor="middle" fill="#f0f0f0" font-size="11" font-weight="500">Skill Injection</text>
+  <text x="778" y="169" text-anchor="middle" fill="#888" font-size="9">Skills → Claude Kontext</text>
+
+  <rect x="860" y="132" width="140" height="46" rx="5" fill="#1a1a1a" stroke="#c8a44e" stroke-width="0.6"/>
+  <text x="930" y="153" text-anchor="middle" fill="#f0f0f0" font-size="11" font-weight="500">Training Data</text>
+  <text x="930" y="169" text-anchor="middle" fill="#888" font-size="9">Conversations → Training</text>
+
+  <rect x="1012" y="132" width="140" height="46" rx="5" fill="#1a1a1a" stroke="#c8a44e" stroke-width="0.6"/>
+  <text x="1082" y="153" text-anchor="middle" fill="#f0f0f0" font-size="11" font-weight="500">API Proxy</text>
+  <text x="1082" y="169" text-anchor="middle" fill="#888" font-size="9">Request Routing → Claude</text>
+
+  <!-- ============================================ -->
+  <!-- PAPERCLIP BLOCK (rot = core)                 -->
+  <!-- ============================================ -->
+  <rect x="690" y="306" width="480" height="186" rx="8" fill="#131313" stroke="#c62828" stroke-width="2"/>
+  <text x="930" y="330" text-anchor="middle" fill="#c62828" font-size="17" font-weight="700" letter-spacing="3">PAPERCLIP</text>
+  <text x="930" y="347" text-anchor="middle" fill="#888" font-size="11" font-weight="400">Agent-Orchestrierung · KI-Companies</text>
+
+  <!-- Company 1 -->
+  <rect x="708" y="360" width="224" height="66" rx="5" fill="#161616" stroke="#c62828" stroke-width="0.8"/>
+  <text x="820" y="380" text-anchor="middle" fill="#f0f0f0" font-size="12" font-weight="600">ClawTeam Capital</text>
+  <text x="820" y="396" text-anchor="middle" fill="#aaa" font-size="10">7 Agents · Finance Reports</text>
+  <rect x="776" y="404" width="88" height="16" rx="3" fill="#161616" stroke="#4a8" stroke-width="0.8"/>
+  <text x="820" y="415" text-anchor="middle" fill="#4a8" font-size="9" font-weight="500">Status: Running</text>
+
+  <!-- Company 2 -->
+  <rect x="944" y="360" width="210" height="66" rx="5" fill="#161616" stroke="#c62828" stroke-width="0.8"/>
+  <text x="1049" y="380" text-anchor="middle" fill="#f0f0f0" font-size="12" font-weight="600">Product Compass</text>
+  <text x="1049" y="396" text-anchor="middle" fill="#aaa" font-size="10">48 Agents · GTM Strategy</text>
+  <rect x="1005" y="404" width="88" height="16" rx="3" fill="#161616" stroke="#c8a44e" stroke-width="0.8"/>
+  <text x="1049" y="415" text-anchor="middle" fill="#c8a44e" font-size="9" font-weight="500">Status: In Arbeit</text>
+
+  <!-- Agent details row -->
+  <rect x="708" y="434" width="224" height="48" rx="5" fill="#161616" stroke="#333" stroke-width="0.5"/>
+  <text x="820" y="454" text-anchor="middle" fill="#aaa" font-size="10">Autonome Agenten mit definierten Rollen</text>
+  <text x="820" y="470" text-anchor="middle" fill="#777" font-size="9">CEO · CFO · Analyst · Researcher · Writer</text>
+
+  <rect x="944" y="434" width="210" height="48" rx="5" fill="#161616" stroke="#333" stroke-width="0.5"/>
+  <text x="1049" y="454" text-anchor="middle" fill="#aaa" font-size="10">Groesstes Agent-Netzwerk</text>
+  <text x="1049" y="470" text-anchor="middle" fill="#777" font-size="9">Market · Product · Sales · Support · Ops</text>
+
+  <!-- ============================================ -->
+  <!-- MCP SERVERS BLOCK (gold = infrastructure)    -->
+  <!-- ============================================ -->
+  <rect x="690" y="508" width="480" height="120" rx="8" fill="#131313" stroke="#c8a44e" stroke-width="2"/>
+  <text x="930" y="532" text-anchor="middle" fill="#c8a44e" font-size="17" font-weight="700" letter-spacing="3">MCP SERVERS</text>
+  <text x="930" y="549" text-anchor="middle" fill="#888" font-size="11" font-weight="400">Daten-Provider · MCP-Protokoll · Lokale Services</text>
+
+  <!-- MCP Server boxes -->
+  <rect x="708" y="562" width="140" height="50" rx="5" fill="#1a1a1a" stroke="#c8a44e" stroke-width="0.6"/>
+  <text x="778" y="583" text-anchor="middle" fill="#f0f0f0" font-size="12" font-weight="500">Finance</text>
+  <text x="778" y="600" text-anchor="middle" fill="#888" font-size="9">Marktdaten · Portfolio</text>
+
+  <rect x="860" y="562" width="140" height="50" rx="5" fill="#1a1a1a" stroke="#c8a44e" stroke-width="0.6"/>
+  <text x="930" y="583" text-anchor="middle" fill="#f0f0f0" font-size="12" font-weight="500">Feeds</text>
+  <text x="930" y="600" text-anchor="middle" fill="#888" font-size="9">RSS · News · Updates</text>
+
+  <rect x="1012" y="562" width="140" height="50" rx="5" fill="#1a1a1a" stroke="#c8a44e" stroke-width="0.6"/>
+  <text x="1082" y="583" text-anchor="middle" fill="#f0f0f0" font-size="12" font-weight="500">Kanban</text>
+  <text x="1082" y="600" text-anchor="middle" fill="#888" font-size="9">Tasks · Projekte</text>
+
+  <!-- ============================================ -->
+  <!-- CONNECTION ARROWS (gold = infrastructure)    -->
+  <!-- ============================================ -->
+
+  <!-- OpenClaw -> MetaClaw (gold, API) -->
+  <line x1="670" y1="178" x2="688" y2="178" stroke="#c8a44e" stroke-width="1.8" marker-end="url(#arrow-gold)"/>
+  <rect x="664" y="155" width="26" height="16" rx="3" fill="#0c0c0c"/>
+  <text x="677" y="167" text-anchor="middle" fill="#c8a44e" font-size="10" font-weight="600">API</text>
+
+  <!-- OpenClaw -> Paperclip (gold, API) -->
+  <line x1="670" y1="410" x2="688" y2="410" stroke="#c8a44e" stroke-width="1.8" marker-end="url(#arrow-gold)"/>
+  <rect x="664" y="393" width="26" height="16" rx="3" fill="#0c0c0c"/>
+  <text x="677" y="405" text-anchor="middle" fill="#c8a44e" font-size="10" font-weight="600">API</text>
+
+  <!-- MetaClaw -> Claude API (gold, HTTPS) -->
+  <line x1="1170" y1="178" x2="1190" y2="178" stroke="#c8a44e" stroke-width="1.5" stroke-dasharray="none"/>
+  <line x1="1190" y1="178" x2="1190" y2="131" stroke="#c8a44e" stroke-width="1.5"/>
+  <line x1="1190" y1="131" x2="1236" y2="131" stroke="#c8a44e" stroke-width="1.5" marker-end="url(#arrow-gold)"/>
+  <text x="1214" y="122" text-anchor="middle" fill="#c8a44e" font-size="9" font-weight="500">HTTPS</text>
+
+  <!-- Mac Mini -> Discord (gold, WebSocket) -->
+  <line x1="1192" y1="265" x2="1236" y2="265" stroke="#c8a44e" stroke-width="1.5" marker-end="url(#arrow-gold)"/>
+  <text x="1214" y="257" text-anchor="middle" fill="#c8a44e" font-size="9" font-weight="500">WebSocket</text>
+
+  <!-- Mac Mini -> Telegram (gold, Bot API) -->
+  <line x1="1192" y1="400" x2="1236" y2="400" stroke="#c8a44e" stroke-width="1.5" marker-end="url(#arrow-gold)"/>
+  <text x="1214" y="392" text-anchor="middle" fill="#c8a44e" font-size="9" font-weight="500">Bot API</text>
+
+  <!-- OpenClaw -> MCP Servers (gold, MCP) -->
+  <line x1="670" y1="560" x2="688" y2="560" stroke="#c8a44e" stroke-width="1.8" marker-end="url(#arrow-gold)"/>
+  <rect x="660" y="537" width="34" height="16" rx="3" fill="#0c0c0c"/>
+  <text x="677" y="549" text-anchor="middle" fill="#c8a44e" font-size="10" font-weight="600">MCP</text>
+
+  <!-- Mac Mini -> E-Mail (grey, IMAP) -->
+  <line x1="1192" y1="510" x2="1236" y2="510" stroke="#888" stroke-width="1.5" marker-end="url(#arrow-grey)"/>
+  <text x="1214" y="502" text-anchor="middle" fill="#888" font-size="9" font-weight="500">IMAP</text>
+
+  <!-- ============================================ -->
+  <!-- EXTERNAL SERVICES (grey = hardware/extern)   -->
+  <!-- ============================================ -->
+
+  <!-- Claude API -->
+  <rect x="1245" y="86" width="325" height="90" rx="8" fill="#161616" stroke="#555" stroke-width="1.2"/>
+  <text x="1408" y="110" text-anchor="middle" fill="#f0f0f0" font-size="15" font-weight="700" letter-spacing="2">CLAUDE API</text>
+  <text x="1408" y="128" text-anchor="middle" fill="#aaa" font-size="11">Anthropic · Opus 4.6</text>
+  <text x="1408" y="146" text-anchor="middle" fill="#777" font-size="10">LLM Backend · Reasoning · Generation</text>
+  <text x="1408" y="163" text-anchor="middle" fill="#666" font-size="9">Extended Thinking · Tool Use · Vision</text>
+
+  <!-- Discord -->
+  <rect x="1245" y="224" width="325" height="86" rx="8" fill="#161616" stroke="#555" stroke-width="1.2"/>
+  <text x="1408" y="248" text-anchor="middle" fill="#f0f0f0" font-size="15" font-weight="700" letter-spacing="2">DISCORD</text>
+  <text x="1408" y="266" text-anchor="middle" fill="#aaa" font-size="11">Hub Bot · Loop · Befehle</text>
+  <text x="1408" y="284" text-anchor="middle" fill="#777" font-size="10">Kommando-Zentrale fuer alle Agenten</text>
+  <text x="1408" y="300" text-anchor="middle" fill="#666" font-size="9">Channels · Threads · Reactions</text>
+
+  <!-- Telegram -->
+  <rect x="1245" y="358" width="325" height="82" rx="8" fill="#161616" stroke="#555" stroke-width="1.2"/>
+  <text x="1408" y="382" text-anchor="middle" fill="#f0f0f0" font-size="15" font-weight="700" letter-spacing="2">TELEGRAM</text>
+  <text x="1408" y="400" text-anchor="middle" fill="#aaa" font-size="11">Mobiler Zugang · Chat</text>
+  <text x="1408" y="418" text-anchor="middle" fill="#777" font-size="10">Schnelle Interaktion von unterwegs</text>
+  <text x="1408" y="432" text-anchor="middle" fill="#666" font-size="9">Push Notifications · Inline Queries</text>
+
+  <!-- E-Mail -->
+  <rect x="1245" y="488" width="325" height="82" rx="8" fill="#161616" stroke="#555" stroke-width="1.2"/>
+  <text x="1408" y="512" text-anchor="middle" fill="#f0f0f0" font-size="15" font-weight="700" letter-spacing="2">E-MAIL</text>
+  <text x="1408" y="530" text-anchor="middle" fill="#aaa" font-size="11">IMAP/SMTP · Himalaya Integration</text>
+  <text x="1408" y="548" text-anchor="middle" fill="#777" font-size="10">Automatisierte E-Mail-Verarbeitung</text>
+  <text x="1408" y="562" text-anchor="middle" fill="#666" font-size="9">Filter · Reply · Draft · Send</text>
+
+  <!-- Color Legend -->
+  <rect x="30" y="742" width="470" height="32" rx="5" fill="#111" stroke="#252525" stroke-width="0.5"/>
+  <circle cx="58" cy="758" r="6" fill="#c62828"/>
+  <text x="73" y="763" fill="#f0f0f0" font-size="11" font-weight="500">Core (OpenClaw)</text>
+  <circle cx="200" cy="758" r="6" fill="#c8a44e"/>
+  <text x="215" y="763" fill="#f0f0f0" font-size="11" font-weight="500">Infrastruktur</text>
+  <circle cx="330" cy="758" r="6" fill="#555"/>
+  <text x="345" y="763" fill="#f0f0f0" font-size="11" font-weight="500">Hardware / Extern</text>
+
+</svg>
