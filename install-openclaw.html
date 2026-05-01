@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-<html lang="de" class="theme-hub">
+<html lang="de" class="theme-install">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AO Projects</title>
-<meta name="description" content="AO Projects — Vom Anfang bis zum Ende. Projekte, Learnings und Dokumentation rund um KI im Alltag.">
-<meta property="og:title" content="AO Projects">
-<meta property="og:description" content="Vom Anfang bis zum Ende — KI ehrlich dokumentiert">
-<meta property="og:image" content="assets/og-image-logo.png">
+<title>OpenClaw installieren — AO Projects</title>
+<meta name="description" content="Schritt-für-Schritt-Anleitung: OpenClaw installieren und initiales Setup für deinen eigenen Agent.">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -36,63 +32,28 @@
 </nav>
 
 <div class="mobile-menu">
+  <a href="index.html" onclick="this.parentElement.classList.remove('open')">Home</a>
   <a href="john.html" onclick="this.parentElement.classList.remove('open')">John</a>
   <a href="harnesses.html" onclick="this.parentElement.classList.remove('open')">Agent Harnesses</a>
   <a href="about.html" onclick="this.parentElement.classList.remove('open')">About</a>
 </div>
 
 <!-- Hero -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-content">
-    <img src="assets/logo-256.png" alt="AO Projects Logo" class="hero-logo">
-    <h1>AO Projects</h1>
-    <p class="tagline">Vom Anfang bis zum Ende. KI ehrlich dokumentiert, live gebaut, Schritt für Schritt.</p>
-    <p class="tagline-sub">A &amp; O</p>
+<section class="subpage-hero">
+  <div class="container">
+    <h1>OpenClaw installieren</h1>
+    <p class="subtitle">Schritt-für-Schritt: Vom leeren Mac zum laufenden Agent. Etwa 30 Minuten, wenn alles glatt läuft.</p>
   </div>
 </section>
 
-<!-- Projects -->
-<section style="padding-top: 0;">
+<!-- SKELETON: alle Steps kommen in Step 5 mit frontend-design-Skill -->
+<section class="content-section">
   <div class="container">
-    <div class="projects-grid">
-
-      <!-- Card: John -->
-      <a href="john.html" class="project-card project-card--john fade-in">
-        <img src="assets/img-john-card.png" alt="John - KI Assistant Workspace" style="width:100%; height:200px; object-fit:cover; border-radius:16px 16px 0 0; display:block;">
-        <div class="project-card-body">
-          <span class="project-card-label">KI-Journey</span>
-          <h3>John</h3>
-          <p>Ein KI-Agent, der mitdenkt, mitbaut und dazulernt. Websites, Code, Analysen — teils autonom, inklusive aller Umwege.</p>
-          <span class="project-card-arrow">Mehr erfahren &rarr;</span>
-        </div>
-      </a>
-
-      <!-- Card: Agent Harnesses -->
-      <a href="harnesses.html" class="project-card project-card--harnesses fade-in">
-        <div class="project-card-placeholder" aria-hidden="true">
-          <span class="mj-label" style="font-size:0.7rem; letter-spacing:1px;">PLACEHOLDER</span>
-          <span class="mj-prompt" style="margin-top:8px;">img-harnesses-card.png — wird in Step 3 generiert</span>
-        </div>
-        <div class="project-card-body">
-          <span class="project-card-label">Das System hinter John</span>
-          <h3>Agent Harnesses</h3>
-          <p>OpenClaw, Claude Code Desktop, Cowork, Cloud Routines — die Werkbänke, auf denen John läuft. Stack, Architektur und wie du es selbst aufsetzt.</p>
-          <span class="project-card-arrow">Mehr erfahren &rarr;</span>
-        </div>
-      </a>
-
-      <!-- Card: About -->
-      <a href="about.html" class="project-card project-card--about fade-in">
-        <img src="assets/img-about-card.png" alt="About - Die Person dahinter" style="width:100%; height:200px; object-fit:cover; border-radius:16px 16px 0 0; display:block;">
-        <div class="project-card-body">
-          <span class="project-card-label">Die Person dahinter</span>
-          <h3>About</h3>
-          <p>Vibe Coder: Ein Ingenieur, der nicht programmieren kann, aber trotzdem baut. Das Setup, die Vision und der Weg hierher.</p>
-          <span class="project-card-arrow">Mehr erfahren &rarr;</span>
-        </div>
-      </a>
-
+    <span class="section-label fade-in">Skeleton</span>
+    <h2 class="section-title fade-in">Inhalt kommt in Step 5.</h2>
+    <div class="section-text fade-in">
+      <p>Diese Seite wird mit dem <code>frontend-design</code>-Skill ausgebaut: Step-by-Step-Layout, kopierbare Code-Blocks, anchor-Navigation rechts.</p>
+      <p>Geplante Sektionen: Prerequisites · Verzeichnis-Struktur · Identity-Files · Hooks · MCP-Server · Skills · Services · Heartbeat · Verify.</p>
     </div>
   </div>
 </section>
@@ -118,7 +79,6 @@
   </div>
 </footer>
 
-<!-- Scroll Animation -->
 <script>
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
