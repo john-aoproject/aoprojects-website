@@ -369,6 +369,19 @@ section { padding: 60px 0; }
   color: var(--muted); font-family: 'JetBrains Mono', monospace;
 }
 
+/* ===== Diagram Wrap (für inline-eingebundene SVG-Diagramme) ===== */
+.diagram-wrap {
+  margin: 32px auto 0;
+  max-width: 100%;
+}
+.diagram-wrap object,
+.diagram-wrap svg,
+.diagram-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ===== Scroll Animations ===== */
 .fade-in {
   opacity: 0; transform: translateY(20px);
