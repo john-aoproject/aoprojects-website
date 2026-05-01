@@ -1,14 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 780" role="img"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 1080" role="img"
      aria-labelledby="diag-title diag-desc"
      style="font-family:Inter,system-ui,sans-serif;">
-  <title id="diag-title">John in zwei Welten — Distillat vs. OpenClaw</title>
-  <desc id="diag-desc">Vergleich der portablen John-Distillation (vier Files für Claude Projects, ChatGPT, Cursor) mit dem vollen OpenClaw-Master, der zusätzlich Skills, Hooks, MCP-Server, Services und Heartbeat enthält.</desc>
+  <title id="diag-title">John in zwei Welten — OpenClaw vs. Distillat</title>
+  <desc id="diag-desc">Vergleich des vollen OpenClaw-Masters (Identity-Files, Skills, Hooks, MCP-Server, Services, Heartbeat — kann handeln) mit der portablen John-Distillation (vier Identity-Files, kann nur antworten und denken). Beide leben im Obsidian-Vault: Distillat physisch in John Claude Context/, OpenClaw schreibt Logs/Drafts/Memory via obsidian-scribe.</desc>
 
   <defs>
-    <!-- Pfeilspitze für Sync-Arrow -->
-    <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5"
+    <marker id="arrowhead-sync" viewBox="0 0 10 10" refX="9" refY="5"
             markerWidth="8" markerHeight="8" orient="auto">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#7aa3c2"/>
+    </marker>
+    <marker id="arrowhead-obs" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8a7ad4"/>
     </marker>
   </defs>
 
@@ -18,147 +21,150 @@
       John in zwei Welten
     </text>
     <text x="620" y="92" font-size="15" fill="#888" letter-spacing="0.5">
-      Portable Distillation  ·  lokaler Master
+      voller Master  ·  portable Distillation
     </text>
   </g>
 
-  <!-- ═══════════════════════ CARD: DISTILLAT (links) ═══════════════════════ -->
+  <!-- ═══════════════════════ CARD: OPENCLAW (LINKS) ═══════════════════════ -->
   <g>
-    <!-- Card-Frame -->
-    <rect x="80" y="150" width="420" height="430" rx="14"
-          fill="#161616" stroke="#3a4350" stroke-width="1.5"/>
-    <!-- Card-Title (zentriert) -->
-    <g text-anchor="middle">
-      <text x="290" y="195" font-size="24" font-weight="700" fill="#f0f0f0">
-        John-Distillat
-      </text>
-      <text x="290" y="222" font-size="13" fill="#888" letter-spacing="0.3">
-        portable · tool-agnostisch
-      </text>
-    </g>
-
-    <!-- Section: IDENTITY -->
-    <g font-family="JetBrains Mono, monospace">
-      <text x="115" y="270" font-size="11" font-weight="600" fill="#9aa3ad" letter-spacing="2">
-        IDENTITY
-      </text>
-    </g>
-    <g font-size="15" fill="#e0e0e0">
-      <!-- Bullets als kleine Kreise in Section-Farbe -->
-      <circle cx="120" cy="298" r="3.5" fill="#9aa3ad"/>
-      <text x="135" y="303"><tspan font-weight="600">JOHN.md</tspan>  <tspan fill="#888">— Persona, Vibe</tspan></text>
-      <circle cx="120" cy="326" r="3.5" fill="#9aa3ad"/>
-      <text x="135" y="331"><tspan font-weight="600">BEHAVIOR.md</tspan>  <tspan fill="#888">— Arbeitsregeln</tspan></text>
-      <circle cx="120" cy="354" r="3.5" fill="#9aa3ad"/>
-      <text x="135" y="359"><tspan font-weight="600">USER.md</tspan>  <tspan fill="#888">— Sebastian-Profil</tspan></text>
-      <circle cx="120" cy="382" r="3.5" fill="#9aa3ad"/>
-      <text x="135" y="387"><tspan font-weight="600">MEMORY.md</tspan>  <tspan fill="#888">— portable Fakten</tspan></text>
-    </g>
-
-    <!-- Section: LÄUFT IN -->
-    <g font-family="JetBrains Mono, monospace">
-      <text x="115" y="438" font-size="11" font-weight="600" fill="#9aa3ad" letter-spacing="2">
-        LÄUFT IN
-      </text>
-    </g>
-    <g font-size="15" fill="#e0e0e0">
-      <circle cx="120" cy="466" r="3.5" fill="#9aa3ad"/>
-      <text x="135" y="471">Claude Projects</text>
-      <circle cx="120" cy="494" r="3.5" fill="#9aa3ad"/>
-      <text x="135" y="499">ChatGPT Custom GPT</text>
-      <circle cx="120" cy="522" r="3.5" fill="#9aa3ad"/>
-      <text x="135" y="527">Cursor Rules</text>
-    </g>
-
-    <!-- Footer-Note -->
-    <text x="290" y="558" text-anchor="middle" font-size="12" font-style="italic" fill="#666">
-      4 Files. Keine Runtime nötig.
-    </text>
-  </g>
-
-  <!-- ═══════════════════════ SYNC-ARROW (zwischen Cards) ═══════════════════════ -->
-  <g>
-    <!-- Arrow OpenClaw → Distillat -->
-    <line x1="740" y1="365" x2="510" y2="365"
-          stroke="#7aa3c2" stroke-width="2.2" stroke-linecap="round"
-          marker-end="url(#arrowhead)"/>
-    <!-- Label zentriert ÜBER dem Pfeil -->
-    <g text-anchor="middle" fill="#7aa3c2">
-      <text x="625" y="345" font-size="13" font-weight="600" letter-spacing="1">
-        SYNC
-      </text>
-      <text x="625" y="395" font-size="11" fill="#5a7a92" font-style="italic">
-        kuratiert
-      </text>
-    </g>
-  </g>
-
-  <!-- ═══════════════════════ CARD: OPENCLAW (rechts) ═══════════════════════ -->
-  <g>
-    <rect x="740" y="150" width="460" height="570" rx="14"
+    <rect x="80" y="150" width="460" height="640" rx="14"
           fill="#1a1812" stroke="#c8a44e" stroke-width="1.5"/>
     <g text-anchor="middle">
-      <text x="970" y="195" font-size="24" font-weight="700" fill="#f0f0f0">
-        OpenClaw
-      </text>
-      <text x="970" y="222" font-size="13" fill="#888" letter-spacing="0.3">
-        voller Master · lokale Runtime
-      </text>
+      <text x="310" y="195" font-size="24" font-weight="700" fill="#f0f0f0">OpenClaw</text>
+      <text x="310" y="222" font-size="13" fill="#888" letter-spacing="0.3">voller Master · lokale Runtime</text>
     </g>
 
-    <!-- Section: IDENTITY-FILES (MASTER) -->
-    <g font-family="JetBrains Mono, monospace">
-      <text x="775" y="270" font-size="11" font-weight="600" fill="#c8a44e" letter-spacing="2">
-        IDENTITY (MASTER)
-      </text>
-    </g>
-    <g font-size="15" fill="#e0e0e0">
-      <circle cx="780" cy="298" r="3.5" fill="#c8a44e"/>
-      <text x="795" y="303"><tspan font-weight="600">SOUL.md</tspan>  +  <tspan font-weight="600">IDENTITY.md</tspan></text>
-      <circle cx="780" cy="326" r="3.5" fill="#c8a44e"/>
-      <text x="795" y="331"><tspan font-weight="600">AGENTS.md</tspan></text>
-      <circle cx="780" cy="354" r="3.5" fill="#c8a44e"/>
-      <text x="795" y="359"><tspan font-weight="600">USER.md</tspan>  +  <tspan font-weight="600">USER-DETAIL.md</tspan></text>
-      <circle cx="780" cy="382" r="3.5" fill="#c8a44e"/>
-      <text x="795" y="387"><tspan font-weight="600">MEMORY.md</tspan></text>
+    <!-- IDENTITY-FILES -->
+    <text x="115" y="265" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600" fill="#c8a44e" letter-spacing="2">IDENTITY (MASTER)</text>
+    <g font-size="14" fill="#e0e0e0">
+      <circle cx="120" cy="290" r="3" fill="#c8a44e"/><text x="135" y="294"><tspan font-weight="600">SOUL.md</tspan>  +  <tspan font-weight="600">IDENTITY.md</tspan></text>
+      <circle cx="120" cy="314" r="3" fill="#c8a44e"/><text x="135" y="318"><tspan font-weight="600">AGENTS.md</tspan></text>
+      <circle cx="120" cy="338" r="3" fill="#c8a44e"/><text x="135" y="342"><tspan font-weight="600">USER.md</tspan>  +  <tspan font-weight="600">USER-DETAIL.md</tspan></text>
+      <circle cx="120" cy="362" r="3" fill="#c8a44e"/><text x="135" y="366"><tspan font-weight="600">MEMORY.md</tspan></text>
     </g>
 
-    <!-- Section: KOMPONENTEN -->
-    <g font-family="JetBrains Mono, monospace">
-      <text x="775" y="438" font-size="11" font-weight="600" fill="#c8a44e" letter-spacing="2">
-        + KOMPONENTEN
-      </text>
-    </g>
-    <g font-size="15" fill="#e0e0e0">
-      <circle cx="780" cy="466" r="3.5" fill="#c8a44e"/>
-      <text x="795" y="471">12 Skills</text>
-      <circle cx="780" cy="494" r="3.5" fill="#c8a44e"/>
-      <text x="795" y="499">Hooks (Whitelist, Heartbeat)</text>
-      <circle cx="780" cy="522" r="3.5" fill="#c8a44e"/>
-      <text x="795" y="527">MCP-Server <tspan fill="#888">(Obsidian, Excalidraw, GH)</tspan></text>
-      <circle cx="780" cy="550" r="3.5" fill="#c8a44e"/>
-      <text x="795" y="555">Services <tspan fill="#888">(Kanban, Discord-Hub)</tspan></text>
-      <circle cx="780" cy="578" r="3.5" fill="#c8a44e"/>
-      <text x="795" y="583">Heartbeat + LaunchAgents</text>
+    <!-- KOMPONENTEN -->
+    <text x="115" y="402" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600" fill="#c8a44e" letter-spacing="2">+ KOMPONENTEN</text>
+    <g font-size="14" fill="#e0e0e0">
+      <circle cx="120" cy="427" r="3" fill="#c8a44e"/><text x="135" y="431">12 Skills</text>
+      <circle cx="120" cy="451" r="3" fill="#c8a44e"/><text x="135" y="455">Hooks <tspan fill="#888">(Whitelist, Heartbeat)</tspan></text>
+      <circle cx="120" cy="475" r="3" fill="#c8a44e"/><text x="135" y="479">MCP-Server <tspan fill="#888">(Obsidian, Excalidraw, GH)</tspan></text>
+      <circle cx="120" cy="499" r="3" fill="#c8a44e"/><text x="135" y="503">Services <tspan fill="#888">(Kanban, Discord-Hub)</tspan></text>
+      <circle cx="120" cy="523" r="3" fill="#c8a44e"/><text x="135" y="527">Heartbeat + LaunchAgents</text>
     </g>
 
-    <!-- Section: LÄUFT IN -->
-    <g font-family="JetBrains Mono, monospace">
-      <text x="775" y="630" font-size="11" font-weight="600" fill="#c8a44e" letter-spacing="2">
-        LÄUFT IN
-      </text>
+    <!-- Divider -->
+    <line x1="115" y1="555" x2="505" y2="555" stroke="#3a3528" stroke-width="1"/>
+
+    <!-- WAS ICH KANN -->
+    <text x="115" y="580" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600" fill="#c8a44e" letter-spacing="2">WAS ICH KANN</text>
+    <g font-size="14" fill="#e0e0e0">
+      <text x="120" y="608" font-weight="700" fill="#66bb6a">✓</text><text x="142" y="608">Antworten · Denken · Beraten</text>
+      <text x="120" y="630" font-weight="700" fill="#66bb6a">✓</text><text x="142" y="630">Persönlichkeit · Stil · Tonalität</text>
+      <text x="120" y="652" font-weight="700" fill="#66bb6a">✓</text><text x="142" y="652">Files anlegen + editieren</text>
+      <text x="120" y="674" font-weight="700" fill="#66bb6a">✓</text><text x="142" y="674">Tools triggern <tspan fill="#888">(MCP, Skills)</tspan></text>
+      <text x="120" y="696" font-weight="700" fill="#66bb6a">✓</text><text x="142" y="696">Heartbeat-getriggert reagieren</text>
+      <text x="120" y="718" font-weight="700" fill="#66bb6a">✓</text><text x="142" y="718">Services orchestrieren</text>
     </g>
-    <g font-size="15" fill="#e0e0e0">
-      <circle cx="780" cy="658" r="3.5" fill="#c8a44e"/>
-      <text x="795" y="663"><tspan font-weight="600">Claude Code Desktop</tspan>  <tspan fill="#888">(lokal · Multi-Session)</tspan></text>
+
+    <!-- Läuft in -->
+    <text x="115" y="755" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600" fill="#c8a44e" letter-spacing="2">LÄUFT IN</text>
+    <text x="115" y="778" font-size="14" fill="#e0e0e0"><tspan font-weight="600">Claude Code Desktop</tspan>  <tspan fill="#888">(lokal · Multi-Session)</tspan></text>
+  </g>
+
+  <!-- ═══════════════════════ SYNC-ARROW (Mitte, OpenClaw → Distillat) ═══════════════════════ -->
+  <g>
+    <line x1="550" y1="465" x2="690" y2="465"
+          stroke="#7aa3c2" stroke-width="2.2" stroke-linecap="round"
+          marker-end="url(#arrowhead-sync)"/>
+    <g text-anchor="middle" fill="#7aa3c2">
+      <text x="620" y="448" font-size="13" font-weight="600" letter-spacing="1">SYNC</text>
+      <text x="620" y="488" font-size="11" fill="#5a7a92" font-style="italic">kuratiert</text>
     </g>
   </g>
 
-  <!-- ═══════════════════════ CTA (klickbar zu harnesses.html) ═══════════════════════ -->
+  <!-- ═══════════════════════ CARD: DISTILLAT (RECHTS) ═══════════════════════ -->
+  <g>
+    <rect x="700" y="150" width="460" height="640" rx="14"
+          fill="#161616" stroke="#3a4350" stroke-width="1.5"/>
+    <g text-anchor="middle">
+      <text x="930" y="195" font-size="24" font-weight="700" fill="#f0f0f0">John-Distillat</text>
+      <text x="930" y="222" font-size="13" fill="#888" letter-spacing="0.3">portable · tool-agnostisch</text>
+    </g>
+
+    <!-- IDENTITY -->
+    <text x="735" y="265" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600" fill="#9aa3ad" letter-spacing="2">IDENTITY (KURATIERT)</text>
+    <g font-size="14" fill="#e0e0e0">
+      <circle cx="740" cy="290" r="3" fill="#9aa3ad"/><text x="755" y="294"><tspan font-weight="600">JOHN.md</tspan>  <tspan fill="#888">— Persona, Vibe</tspan></text>
+      <circle cx="740" cy="314" r="3" fill="#9aa3ad"/><text x="755" y="318"><tspan font-weight="600">BEHAVIOR.md</tspan>  <tspan fill="#888">— Arbeitsregeln</tspan></text>
+      <circle cx="740" cy="338" r="3" fill="#9aa3ad"/><text x="755" y="342"><tspan font-weight="600">USER.md</tspan>  <tspan fill="#888">— Sebastian-Profil</tspan></text>
+      <circle cx="740" cy="362" r="3" fill="#9aa3ad"/><text x="755" y="366"><tspan font-weight="600">MEMORY.md</tspan>  <tspan fill="#888">— portable Fakten</tspan></text>
+    </g>
+
+    <!-- Mittlerer Bereich: leer auf OpenClaw-Komponenten-Höhe — Story-Note -->
+    <g text-anchor="middle" fill="#888">
+      <text x="930" y="440" font-size="13" font-style="italic">Vier Markdown-Files.</text>
+      <text x="930" y="462" font-size="13" font-style="italic">Keine Skills. Keine Tools.</text>
+      <text x="930" y="484" font-size="13" font-style="italic">Keine Runtime.</text>
+      <text x="930" y="518" font-size="11" letter-spacing="2" fill="#5a6573">PURE PERSÖNLICHKEIT</text>
+    </g>
+
+    <!-- Divider -->
+    <line x1="735" y1="555" x2="1125" y2="555" stroke="#252e38" stroke-width="1"/>
+
+    <!-- WAS ICH KANN -->
+    <text x="735" y="580" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600" fill="#9aa3ad" letter-spacing="2">WAS ICH KANN</text>
+    <g font-size="14" fill="#e0e0e0">
+      <text x="740" y="608" font-weight="700" fill="#66bb6a">✓</text><text x="762" y="608">Antworten · Denken · Beraten</text>
+      <text x="740" y="630" font-weight="700" fill="#66bb6a">✓</text><text x="762" y="630">Persönlichkeit · Stil · Tonalität</text>
+      <text x="740" y="652" font-weight="700" fill="#5a6573">✗</text><text x="762" y="652" fill="#5a6573">Files anlegen + editieren</text>
+      <text x="740" y="674" font-weight="700" fill="#5a6573">✗</text><text x="762" y="674" fill="#5a6573">Tools triggern</text>
+      <text x="740" y="696" font-weight="700" fill="#5a6573">✗</text><text x="762" y="696" fill="#5a6573">Heartbeat-Reaktion</text>
+      <text x="740" y="718" font-weight="700" fill="#5a6573">✗</text><text x="762" y="718" fill="#5a6573">Services orchestrieren</text>
+    </g>
+
+    <!-- Läuft in -->
+    <text x="735" y="755" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600" fill="#9aa3ad" letter-spacing="2">LÄUFT IN</text>
+    <g font-size="14" fill="#e0e0e0">
+      <tspan/>
+      <text x="735" y="778">
+        <tspan>Claude Projects</tspan>
+        <tspan fill="#888"> · </tspan>
+        <tspan>ChatGPT Custom GPT</tspan>
+        <tspan fill="#888"> · </tspan>
+        <tspan>Cursor Rules</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- ═══════════════════════ OBSIDIAN FOUNDATION ═══════════════════════ -->
+  <g>
+    <!-- Connector arrows from cards to Obsidian -->
+    <line x1="310" y1="790" x2="310" y2="845" stroke="#8a7ad4" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <line x1="930" y1="790" x2="930" y2="845" stroke="#8a7ad4" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+    <!-- Connector labels -->
+    <g font-size="11" fill="#8a7ad4" font-style="italic" text-anchor="middle">
+      <text x="310" y="813">writes Logs · Drafts · Memory</text>
+      <text x="310" y="828" fill="#5a4d8a">via obsidian-scribe</text>
+      <text x="930" y="813">lives in</text>
+      <text x="930" y="828" fill="#5a4d8a">John Claude Context/</text>
+    </g>
+
+    <!-- Obsidian Vault rectangle -->
+    <rect x="180" y="845" width="880" height="80" rx="12"
+          fill="#1a1626" stroke="#4a3a8a" stroke-width="1.5"/>
+    <g text-anchor="middle">
+      <text x="620" y="877" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700" fill="#b3a2ff" letter-spacing="3">OBSIDIAN VAULT</text>
+      <text x="620" y="903" font-size="13" fill="#888">Sebastians Single Source of Truth</text>
+    </g>
+  </g>
+
+  <!-- ═══════════════════════ CTA ═══════════════════════ -->
   <a href="harnesses.html" target="_top">
-    <rect x="420" y="730" width="400" height="42" rx="21"
+    <rect x="420" y="980" width="400" height="42" rx="21"
           fill="none" stroke="#3a4350" stroke-width="1.5"/>
-    <text x="620" y="757" text-anchor="middle" font-size="14" fill="#9aa3ad">
+    <text x="620" y="1007" text-anchor="middle" font-size="14" fill="#9aa3ad">
       → Wie das technisch zusammenspielt: <tspan font-weight="600" fill="#c8a44e">Agent Harnesses</tspan>
     </text>
   </a>
