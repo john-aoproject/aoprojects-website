@@ -30,6 +30,13 @@ ul{list-style:none}
   --accent-glow: rgba(200, 164, 78, 0.12);
 }
 
+/* Joanna — Lavendel als Akzent (zweite Persona neben John, eigenständig) */
+.theme-joanna {
+  --accent: #b3a2ff;
+  --accent-glow: rgba(179, 162, 255, 0.14);
+  --gold: #e8e4ff;
+}
+
 /* Agent Harnesses — Weiss als Akzent (Brand-Palette: Schwarz/Rot/Weiss/Gold) */
 .theme-harnesses {
   --accent: #ffffff;
@@ -132,8 +139,8 @@ section { padding: 60px 0; }
 /* ===== Project Cards (Hub) ===== */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
   margin-bottom: 48px;
 }
 .project-card {
@@ -175,8 +182,21 @@ section { padding: 60px 0; }
 
 /* Card accent — no top stripe */
 .project-card--john { }
+.project-card--joanna { }
 .project-card--harnesses { }
 .project-card--about { }
+
+/* Joanna-Card — Lavendel-Hover (statt Gold) */
+.project-card--joanna:hover {
+  border-color: #b3a2ff;
+  box-shadow: 0 12px 32px rgba(179, 162, 255, 0.18);
+}
+.project-card--joanna:hover h3 {
+  color: #b3a2ff;
+}
+.project-card--joanna .project-card-arrow {
+  color: #b3a2ff;
+}
 
 /* ===== Footer ===== */
 .footer {
@@ -268,15 +288,107 @@ section { padding: 60px 0; }
 
 /* ===== Lessons Learned ===== */
 .lessons-grid {
-  display: grid; grid-template-columns: 1fr; gap: 20px;
-  max-width: 720px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 8px 24px;
 }
+@media (min-width: 760px) {
+  .lessons-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
 .lesson-item {
-  background: var(--surface); border: 1px solid var(--border);
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-top: 2px solid var(--gold);
-  border-radius: 12px; padding: 28px 28px 24px;
-  text-align: left; position: relative;
+  border-radius: 14px;
+  padding: 28px 28px 24px;
+  text-align: left;
+  position: relative;
+
+  /* 3D-Tiefe + statischer goldener Glow (= Peak-Niveau der Shimmer-Animation) */
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.35),
+    0 6px 16px rgba(0, 0, 0, 0.40),
+    0 16px 36px rgba(0, 0, 0, 0.45),
+    0 0 32px 2px rgba(200, 164, 78, 0.345);
+
+  /* Subtile Schwebe-Animation */
+  animation: lesson-float 7s ease-in-out infinite;
+  transform: translateZ(0);
+  transition: transform 0.4s cubic-bezier(0.2, 0.6, 0.2, 1),
+              box-shadow 0.4s ease,
+              border-top-color 0.3s ease;
 }
+
+/* Stagger — asynchrone Bewegung, sonst wirkt es roboterhaft synchron */
+.lesson-item:nth-child(1) { animation-delay: -0.4s; }
+.lesson-item:nth-child(2) { animation-delay: -1.7s; }
+.lesson-item:nth-child(3) { animation-delay: -3.0s; }
+.lesson-item:nth-child(4) { animation-delay: -4.3s; }
+.lesson-item:nth-child(5) { animation-delay: -5.6s; }
+.lesson-item:nth-child(6) { animation-delay: -6.4s; }
+
+@keyframes lesson-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-4px); }
+}
+
+.lesson-item:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.40),
+    0 12px 28px rgba(0, 0, 0, 0.50),
+    0 28px 56px rgba(0, 0, 0, 0.55),
+    0 0 32px 2px rgba(200, 164, 78, 0.345);
+  animation-play-state: paused;
+}
+
+/* Neue Lessons — goldener Pulsing-Glow */
+.lesson-item.lesson-new {
+  border-top-color: #e0c878;
+  border-top-width: 3px;
+  animation: lesson-float 7s ease-in-out infinite,
+             lesson-shimmer 3.5s ease-in-out infinite;
+}
+
+@keyframes lesson-shimmer {
+  0%, 100% {
+    box-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.35),
+      0 6px 16px rgba(0, 0, 0, 0.40),
+      0 16px 36px rgba(0, 0, 0, 0.45),
+      0 0 16px 1px rgba(200, 164, 78, 0.15);
+  }
+  50% {
+    box-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.35),
+      0 6px 16px rgba(0, 0, 0, 0.40),
+      0 16px 36px rgba(0, 0, 0, 0.45),
+      0 0 32px 2px rgba(200, 164, 78, 0.345);
+  }
+}
+
+.lesson-badge {
+  position: absolute;
+  top: 12px; right: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #1a1812;
+  background: linear-gradient(135deg, #e0c878 0%, #c8a44e 100%);
+  padding: 3px 9px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(200, 164, 78, 0.4);
+}
+
 .lesson-item .lesson-number {
   font-size: 0.7rem; font-weight: 700; color: var(--gold);
   font-family: 'JetBrains Mono', monospace; letter-spacing: 1px;
@@ -284,6 +396,272 @@ section { padding: 60px 0; }
 }
 .lesson-item h4 { font-size: 0.95rem; margin-bottom: 8px; color: var(--text); }
 .lesson-item p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+
+/* Reduced motion — Animationen aus für User mit prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .lesson-item,
+  .lesson-item.lesson-new {
+    animation: none !important;
+  }
+}
+
+/* ===== Harness Stack Grid ===== */
+.harness-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 32px auto 0;
+}
+@media (min-width: 760px) {
+  .harness-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+}
+
+.harness-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--gold);
+  border-radius: 14px;
+  padding: 22px 28px 24px;
+  position: relative;
+  text-align: left;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.35),
+    0 6px 16px rgba(0, 0, 0, 0.40),
+    0 16px 36px rgba(0, 0, 0, 0.45);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.harness-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.40),
+    0 10px 24px rgba(0, 0, 0, 0.50),
+    0 24px 48px rgba(0, 0, 0, 0.55);
+}
+
+.harness-card--gold      { border-top-color: #c8a44e; }
+.harness-card--openclaw  {
+  border-top-color: #e81b25;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.35),
+    0 6px 16px rgba(0, 0, 0, 0.40),
+    0 16px 36px rgba(0, 0, 0, 0.45),
+    0 0 28px 2px rgba(232, 27, 37, 0.18);
+}
+.harness-card--anthropic { border-top-color: #c87a4e; }
+.harness-card--hermes {
+  border-top-color: #045652;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.35),
+    0 6px 16px rgba(0, 0, 0, 0.40),
+    0 16px 36px rgba(0, 0, 0, 0.45),
+    0 0 28px 2px rgba(4, 86, 82, 0.35);
+}
+.harness-card--lavender {
+  border-top-color: #b3a2ff;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.35),
+    0 6px 16px rgba(0, 0, 0, 0.40),
+    0 16px 36px rgba(0, 0, 0, 0.45),
+    0 0 28px 2px rgba(179, 162, 255, 0.20);
+}
+.harness-card--neutral  { border-top-color: #5a6573; opacity: 0.85; }
+
+.harness-badge {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #1a1812;
+  background: linear-gradient(135deg, #e0c878 0%, #c8a44e 100%);
+  padding: 4px 10px;
+  border-radius: 10px;
+}
+.harness-badge--accent {
+  background: linear-gradient(135deg, #e8e4ff 0%, #b3a2ff 100%);
+  color: #1a1626;
+}
+.harness-badge--neutral {
+  background: linear-gradient(135deg, #888 0%, #5a6573 100%);
+  color: #f0f0f0;
+}
+.harness-badge--anthropic {
+  background: linear-gradient(135deg, #e09678 0%, #c87a4e 100%);
+  color: #261812;
+}
+.harness-badge--openclaw {
+  background: linear-gradient(135deg, #f74450 0%, #e81b25 100%);
+  color: #ffffff;
+}
+.harness-badge--hermes {
+  background: linear-gradient(135deg, #5fdac8 0%, #045652 100%);
+  color: #041c1c;
+}
+
+.harness-logo {
+  width: 36px; height: 36px;
+  display: block;
+  margin: 0 0 12px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.harness-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 6px 0 4px;
+  color: var(--text);
+  letter-spacing: -0.3px;
+}
+.harness-card--gold h3      { color: #e0c878; }
+.harness-card--openclaw h3  { color: #f74450; }
+.harness-card--anthropic h3 { color: #e09678; }
+.harness-card--hermes h3    { color: #5fdac8; }
+.harness-card--lavender h3  { color: #b3a2ff; }
+.harness-card--neutral h3   { color: #d0d0d0; }
+
+.harness-card .harness-sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.harness-card .harness-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.harness-card .harness-bullets li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+  font-size: 0.88rem;
+  color: #d0d0d0;
+  line-height: 1.55;
+}
+.harness-card .harness-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 9px;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.harness-card--gold .harness-bullets li::before      { background: #c8a44e; }
+.harness-card--openclaw .harness-bullets li::before  { background: #e81b25; }
+.harness-card--anthropic .harness-bullets li::before { background: #c87a4e; }
+.harness-card--hermes .harness-bullets li::before    { background: #045652; }
+.harness-card--lavender .harness-bullets li::before  { background: #b3a2ff; }
+.harness-card--neutral .harness-bullets li::before   { background: #5a6573; }
+
+.harness-card code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82em;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 1px 6px;
+  border-radius: 4px;
+  color: #e0c878;
+}
+
+/* Foundation-Strip — Obsidian unter den 4 Karten */
+.harness-foundation {
+  max-width: 1100px;
+  margin: 32px auto 0;
+  padding: 28px 32px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(179,162,255,0.06) 0%, rgba(26,22,38,0.5) 100%);
+  border: 1px solid #2a2235;
+  border-left: 4px solid #8a7ad4;
+  position: relative;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+.harness-logo--foundation {
+  width: 44px; height: 44px;
+  position: absolute;
+  top: 24px; right: 28px;
+  margin: 0;
+}
+.harness-foundation .foundation-label {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #b3a2ff;
+  margin-bottom: 6px;
+}
+.harness-foundation h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #f0f0f0;
+  margin-bottom: 10px;
+  letter-spacing: -0.3px;
+}
+.harness-foundation p {
+  font-size: 0.92rem;
+  color: #c0bcd0;
+  line-height: 1.65;
+  max-width: 880px;
+}
+
+
+/* ===== Joanna CTA-Pille zum Stack ===== */
+.joanna-cta-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  max-width: 600px;
+  margin: 24px auto;
+  padding: 18px 32px;
+  background: #1a1626;
+  border: 2.5px solid #b3a2ff;
+  border-radius: 38px;
+  position: relative;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #b3a2ff;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.3s ease;
+  box-shadow: 0 8px 24px rgba(179, 162, 255, 0.20);
+}
+.joanna-cta-pill:hover {
+  background: #2a1f3a;
+  border-color: #e8e4ff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(179, 162, 255, 0.32);
+}
+.joanna-cta-pill .cta-glow {
+  position: absolute;
+  inset: -6px;
+  border: 1.5px solid #b3a2ff;
+  border-radius: 42px;
+  opacity: 0.3;
+  animation: cta-glow-lavender 2.6s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes cta-glow-lavender {
+  0%, 100% { opacity: 0.25; }
+  50%      { opacity: 0.75; }
+}
+.joanna-cta-pill .cta-arrow {
+  font-size: 1.3rem;
+  animation: cta-arrow-nudge 2.4s ease-in-out infinite;
+  display: inline-block;
+}
 
 /* ===== Code Block / Prompt ===== */
 .prompt-block {
@@ -390,6 +768,9 @@ section { padding: 60px 0; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
 /* ===== Responsive ===== */
+@media (max-width: 1080px) {
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }

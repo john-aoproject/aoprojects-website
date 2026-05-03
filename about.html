@@ -22,6 +22,7 @@
     </a>
     <div class="nav-links">
       <a href="john.html">John</a>
+      <a href="joanna.html">Joanna</a>
       <a href="harnesses.html">Agent Harnesses</a>
       <a href="about.html" class="active">About</a>
     </div>
@@ -34,6 +35,7 @@
 <div class="mobile-menu">
   <a href="index.html" onclick="this.parentElement.classList.remove('open')">Home</a>
   <a href="john.html" onclick="this.parentElement.classList.remove('open')">John</a>
+  <a href="joanna.html" onclick="this.parentElement.classList.remove('open')">Joanna</a>
   <a href="harnesses.html" onclick="this.parentElement.classList.remove('open')">Agent Harnesses</a>
   <a href="about.html" onclick="this.parentElement.classList.remove('open')">About</a>
 </div>
@@ -63,114 +65,17 @@
   </div>
 </section>
 
-<!-- Das Setup -->
-<section class="content-section">
-  <div class="container">
-    <span class="section-label fade-in">Das Setup</span>
-    <h2 class="section-title fade-in">Wie das hier läuft.</h2>
-
-    <!-- Architektur-Diagramm (klickbar zum Vergrößern) -->
-    <div class="fade-in" style="margin: 0 auto; max-width: 100%; border-radius: 8px; overflow: hidden; background: #0c0c0c; cursor: pointer;" onclick="window.open('assets/setup-architecture.svg', '_blank')">
-      <img src="assets/setup-architecture.svg" alt="AO Projects System-Architektur: Mac Mini → OpenClaw → Claude API, MetaClaw, Paperclip, Discord, Telegram" style="width:100%; height:auto; display:block; min-height: 400px;">
-    </div>
-    <p style="text-align:center; color: var(--muted); font-size: 0.8rem; margin-top: 8px;">Klicken zum Vergrößern</p>
-
-    <div class="section-text fade-in">
-      <p>Die gesamte Infrastruktur läuft auf einem einzigen Mac Mini. Kein Cloud-Server, kein großes Budget — ein Rechner, der 24/7 arbeitet.</p>
-    </div>
-
-    <div class="setup-grid fade-in" style="margin-top:24px;">
-      <div class="setup-item">
-        <div class="setup-item-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c8a44e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="12" rx="2"/><line x1="6" y1="20" x2="18" y2="20"/><line x1="12" y1="16" x2="12" y2="20"/></svg></div>
-        <div class="setup-item-title">Mac Mini</div>
-        <div class="setup-item-desc">Apple Silicon. Die Zentrale. Läuft rund um die Uhr.</div>
-      </div>
-      <div class="setup-item">
-        <div class="setup-item-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c8a44e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L6 8l2 2-4 4 4 4 4-4 2 2 6-6z"/><circle cx="12" cy="12" r="2" fill="#c8a44e"/></svg></div>
-        <div class="setup-item-title">OpenClaw</div>
-        <div class="setup-item-desc">Lokales KI-Framework. Hier lebt John und laufen alle Automatisierungen.</div>
-      </div>
-      <div class="setup-item">
-        <div class="setup-item-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c8a44e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 2.5-1.5 4.5-3 6l-1 3H9l-1-3c-1.5-1.5-3-3.5-3-6a7 7 0 0 1 7-7z"/><line x1="9" y1="21" x2="15" y2="21"/><path d="M10 18h4" /><line x1="12" y1="2" x2="12" y2="0"/><line x1="4.2" y1="4.2" x2="2.8" y2="2.8"/><line x1="19.8" y1="4.2" x2="21.2" y2="2.8"/></svg></div>
-        <div class="setup-item-title">Claude</div>
-        <div class="setup-item-desc">Anthropics KI-Modell (Opus). Das Gehirn hinter John und allen Agents.</div>
-      </div>
-      <div class="setup-item">
-        <div class="setup-item-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c8a44e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12h8"/><circle cx="5" cy="12" r="3"/><circle cx="19" cy="12" r="3"/><path d="M5 9V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3"/><path d="M5 15v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3"/></svg></div>
-        <div class="setup-item-title">MetaClaw</div>
-        <div class="setup-item-desc">MCP-Server. Stellt externe Tools und Datenquellen bereit.</div>
-      </div>
-      <div class="setup-item">
-        <div class="setup-item-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c8a44e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 8h6"/><path d="M9 12h6"/><path d="M9 16h4"/><circle cx="6" cy="8" r="0.5" fill="#c8a44e"/><circle cx="6" cy="12" r="0.5" fill="#c8a44e"/><circle cx="6" cy="16" r="0.5" fill="#c8a44e"/></svg></div>
-        <div class="setup-item-title">Paperclip</div>
-        <div class="setup-item-desc">Agent-Orchestrierung. Baut und steuert die KI-Companies.</div>
-      </div>
-      <div class="setup-item">
-        <div class="setup-item-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c8a44e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94L6.73 20.15a2.1 2.1 0 0 1-3-3l6.68-6.68a6 6 0 0 1 7.94-7.94l-3.65 3.77z"/></svg></div>
-        <div class="setup-item-title">Skills</div>
-        <div class="setup-item-desc">20+ spezialisierte Module für LinkedIn, Design, Recherche und mehr.</div>
-      </div>
-      <div class="setup-item">
-        <div class="setup-item-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c8a44e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
-        <div class="setup-item-title">Whisper</div>
-        <div class="setup-item-desc">Sprache-zu-Text. Sprachnachrichten werden automatisch transkribiert.</div>
-      </div>
-      <div class="setup-item">
-        <div class="setup-item-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c8a44e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 5v6c0 1.66-4.03 3-9 3s-9-1.34-9-3V5"/><path d="M21 11v6c0 1.66-4.03 3-9 3s-9-1.34-9-3v-6"/></svg></div>
-        <div class="setup-item-title">Memory System</div>
-        <div class="setup-item-desc">Persistenter Kontext über Sessions hinweg. Der Schlüssel zu Kontinuität.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Learnings zum Setup -->
-<section class="content-section">
-  <div class="container">
-    <span class="section-label fade-in">Setup Learnings</span>
-    <h2 class="section-title fade-in">Was ich beim Setup gelernt habe.</h2>
-    <div class="section-text fade-in" style="margin-bottom:24px;">
-      <p>OpenClaw installieren ist der einfache Teil. Das Setup drumherum — Memory, Kanäle, Modelle, Scripte — das ist die eigentliche Arbeit. Hier die wichtigsten Erkenntnisse:</p>
-    </div>
-
-    <div class="lessons-grid">
-      <div class="lesson-item fade-in">
-        <span class="lesson-number">01</span>
-        <h4>Sessions starten bei null</h4>
-        <p>Das war die erste Überraschung: Jede neue Session ist ein leeres Blatt. Kein Kontext, kein Gedächtnis. Ohne ein gepflegtes Memory-System und sauber strukturierte Konfigurationsdateien (AGENTS.md, USER.md, SOUL.md) fängt man jedes Mal von vorne an. Das Memory einlesen zu Beginn jeder Session ist kein Nice-to-have — es ist Pflicht.</p>
-      </div>
-
-      <div class="lesson-item fade-in">
-        <span class="lesson-number">02</span>
-        <h4>Prompts sind Code</h4>
-        <p>Ein guter Prompt ist wie eine gute Funktion — präzise Eingabe, vorhersagbare Ausgabe. Vage Anweisungen führen zu vagen Ergebnissen. Ich behandle Prompts mittlerweile wie Code: strukturiert, getestet, versioniert. Je konkreter die Aufgabenstellung, desto besser das Ergebnis. Das gilt für Skills genauso wie für einmalige Anfragen.</p>
-      </div>
-
-      <div class="lesson-item fade-in">
-        <span class="lesson-number">03</span>
-        <h4>Kommunikationskanäle machen den Unterschied</h4>
-        <p>Am Anfang lief alles über die Webchat-Konsole. Dann kam Discord dazu — und plötzlich konnte John im Hintergrund arbeiten und Ergebnisse zurückmelden. Telegram für mobilen Zugriff unterwegs. E-Mail für den Morning Brief. Jeder Kanal hat seinen Zweck, und die Kombination macht das Setup erst alltagstauglich.</p>
-      </div>
-
-      <div class="lesson-item fade-in">
-        <span class="lesson-number">04</span>
-        <h4>Die Modellwahl entscheidet über Qualität</h4>
-        <p>Sonnet ist schnell und günstig — aber bei komplexen, mehrstufigen Aufgaben stößt es an seine Grenzen. Für Architekturentscheidungen, Code-Reviews oder kreative Problemlösung führt an Opus kein Weg vorbei. Ich habe gelernt, das richtige Modell für die richtige Aufgabe einzusetzen. Das spart am Ende mehr als es kostet.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- Die Vision -->
 <section class="content-section">
   <div class="container">
     <span class="section-label fade-in">Die Vision</span>
     <h2 class="section-title fade-in">Warum das Ganze.</h2>
     <div class="section-text fade-in">
-      <p>Es gibt tausende Beiträge über KI. Die meisten wiederholen dieselben Phrasen. "KI wird alles verändern." "Die Zukunft der Arbeit."</p>
+      <p>Es gibt tausende Beiträge über KI. Die meisten wiederholen dieselben Phrasen. „KI wird alles verändern." „Die Zukunft der Arbeit."</p>
       <p>Ich wollte es ausprobieren. Nicht reden, sondern bauen. Nicht theoretisieren, sondern machen. Und dann ehrlich dokumentieren, was funktioniert und was nicht.</p>
+      <p>Daraus sind <strong>John</strong> und <strong>Joanna</strong> entstanden — zwei KI-Personas auf zwei verschiedenen Harnesses, parallel laufend. Beide sind Peer, keine Klone. Beide teilen denselben Vault. Das Experiment: welches Setup liefert was, wo sind die Schwächen, was lässt sich daraus für andere ableiten.</p>
       <p>AO steht für Alpha und Omega — Anfang und Ende. Die Idee: Vom ersten Tag an alles offen zeigen. Die Fehler, die Umwege, die Durchbrüche. Kein poliertes Marketing, sondern echte Learnings.</p>
-      <p>Wenn du das hier liest und denkst "das will ich auch ausprobieren" — dann hat es funktioniert.</p>
+      <p>Wenn du das hier liest und denkst „das will ich auch ausprobieren" — dann hat es funktioniert.</p>
     </div>
   </div>
 </section>

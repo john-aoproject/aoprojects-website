@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1480 700" role="img"
+     aria-labelledby="loop-title loop-desc"
+     style="font-family:Inter,system-ui,sans-serif;">
+  <title id="loop-title">Der Agent Loop</title>
+  <desc id="loop-desc">User-Anfrage tritt in den Zyklus ein: OBSERVE liest Kontext und vorherige Tool-Ergebnisse, THINK plant den nächsten Schritt, ACT führt ein Tool aus. Die Schleife wiederholt sich, bis die Aufgabe erledigt ist; dann verlässt THINK den Loop in Richtung Final Response.</desc>
+
+  <defs>
+    <marker id="loop-arrow" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+    <marker id="loop-arrow-gold" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c8a44e"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <g text-anchor="middle">
+    <text x="740" y="52" font-size="36" font-weight="700" fill="#f0f0f0" letter-spacing="-0.5">
+      Der Agent Loop
+    </text>
+    <text x="740" y="88" font-size="16" fill="#888" letter-spacing="0.4">
+      beobachten  ·  denken  ·  handeln  —  bis die Aufgabe wirklich fertig ist
+    </text>
+  </g>
+
+  <!-- USER box -->
+  <g>
+    <rect x="60" y="160" width="180" height="80" rx="14"
+          fill="#161616" stroke="#5a6573" stroke-width="1.5"/>
+    <text x="150" y="210" text-anchor="middle" font-size="22" font-weight="700" fill="#e0e0e0">User</text>
+  </g>
+
+  <!-- Arrow USER → OBSERVE -->
+  <line x1="240" y1="200" x2="316" y2="200" stroke="#888" stroke-width="2" marker-end="url(#loop-arrow)"/>
+
+  <!-- OBSERVE box (purple) -->
+  <g>
+    <rect x="320" y="140" width="280" height="130" rx="14"
+          fill="#1a1626" stroke="#8a7ad4" stroke-width="2"/>
+    <text x="340" y="184" font-size="30" font-weight="700" fill="#b3a2ff">1. OBSERVE</text>
+    <g font-size="16" fill="#d0c8e0">
+      <text x="340" y="222">Liest Kontext, Files,</text>
+      <text x="340" y="246">vorherige Tool-Ergebnisse</text>
+    </g>
+  </g>
+
+  <!-- Arrow OBSERVE → THINK (long arrow, label centered in gap) -->
+  <line x1="600" y1="200" x2="716" y2="200" stroke="#888" stroke-width="2" marker-end="url(#loop-arrow)"/>
+  <text x="658" y="186" text-anchor="middle" font-size="18" fill="#999" font-style="italic">next step</text>
+
+  <!-- THINK box (blue) -->
+  <g>
+    <rect x="720" y="140" width="280" height="130" rx="14"
+          fill="#141e26" stroke="#7aa3c2" stroke-width="2"/>
+    <text x="740" y="184" font-size="30" font-weight="700" fill="#9ec5e0">2. THINK</text>
+    <g font-size="16" fill="#c8d4e0">
+      <text x="740" y="222">Plant nächsten Schritt,</text>
+      <text x="740" y="246">entscheidet das Vorgehen</text>
+    </g>
+  </g>
+
+  <!-- Arrow THINK → ACT (down) -->
+  <line x1="860" y1="270" x2="860" y2="408" stroke="#888" stroke-width="2" marker-end="url(#loop-arrow)"/>
+  <text x="880" y="345" font-size="18" fill="#999" font-style="italic">decide action</text>
+
+  <!-- ACT box (green) -->
+  <g>
+    <rect x="720" y="410" width="280" height="130" rx="14"
+          fill="#141e16" stroke="#66bb6a" stroke-width="2"/>
+    <text x="740" y="454" font-size="30" font-weight="700" fill="#8fdb93">3. ACT</text>
+    <g font-size="16" fill="#c8d8c8">
+      <text x="740" y="492">Tool aufrufen, File editieren,</text>
+      <text x="740" y="516">Command ausführen</text>
+    </g>
+  </g>
+
+  <!-- Arrow ACT → OBSERVE (loop back, L-curve) -->
+  <path d="M 720 470 Q 460 470 460 272"
+        fill="none" stroke="#888" stroke-width="2" marker-end="url(#loop-arrow)"/>
+  <text x="445" y="380" text-anchor="end" font-size="18" fill="#999" font-style="italic">get result</text>
+
+  <!-- Arrow THINK → Final Response (right, gold = exit loop) -->
+  <line x1="1000" y1="200" x2="1156" y2="200" stroke="#c8a44e" stroke-width="2" marker-end="url(#loop-arrow-gold)"/>
+  <text x="1078" y="184" text-anchor="middle" font-size="18" fill="#c8a44e" font-style="italic">task complete</text>
+
+  <!-- Final Response box (gold) -->
+  <g>
+    <rect x="1160" y="140" width="280" height="130" rx="14"
+          fill="#1a1812" stroke="#c8a44e" stroke-width="2"/>
+    <text x="1180" y="184" font-size="30" font-weight="700" fill="#e0c878">FINAL RESPONSE</text>
+    <g font-size="16" fill="#e0d8b8">
+      <text x="1180" y="222">Synthese der Ergebnisse,</text>
+      <text x="1180" y="246">Antwort an den User</text>
+    </g>
+  </g>
+</svg>

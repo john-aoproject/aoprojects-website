@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" role="img"
+     aria-labelledby="harness-title harness-desc"
+     style="font-family:Inter,system-ui,sans-serif;">
+  <title id="harness-title">Was ist ein Agent Harness?</title>
+  <desc id="harness-desc">Ein Agent Harness umfasst vier Bestandteile: LLM (Reasoning-Engine, Beispiel Anthropic), Tools (Aktionen in der Welt), Loop (führt aus, Beispiel Hermes), Context (Identität, Memory, Skills, Beispiel OpenClaw). Diese vier Teile zusammen — eingerahmt vom Container "Agent Harness" — ergeben einen handlungsfähigen Agenten.</desc>
+
+  <defs>
+    <marker id="harness-arrow" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <g text-anchor="middle">
+    <text x="640" y="52" font-size="36" font-weight="700" fill="#f0f0f0" letter-spacing="-0.5">
+      Was ist ein Agent Harness?
+    </text>
+    <text x="640" y="88" font-size="16" fill="#888" letter-spacing="0.4">
+      LLM  ·  Tools  ·  Loop  ·  Context
+    </text>
+  </g>
+
+  <!-- ═══ AGENT-HARNESS-CONTAINER (umfasst alle 4 Komponenten) ═══ -->
+  <rect x="40" y="120" width="1200" height="600" rx="20"
+        fill="none" stroke="#5a6573" stroke-width="2" stroke-dasharray="0"/>
+  <!-- Tab-Mask (überdeckt den Border-Strich oben) -->
+  <rect x="480" y="100" width="320" height="40" fill="#0c0c0c"/>
+  <!-- Tab-Label "Agent Harness" oben zentriert (Headline-Regel: ≥ 28 für Container-Headlines) -->
+  <text x="640" y="132" text-anchor="middle"
+        font-size="30" font-weight="700"
+        fill="#e0e0e0" letter-spacing="0.3">Agent Harness</text>
+
+  <!-- ═══ LLM box (top-left, blue) — VERGRÖSSERT ═══ -->
+  <g>
+    <rect x="80" y="160" width="380" height="220" rx="14"
+          fill="#141e26" stroke="#7aa3c2" stroke-width="2"/>
+    <text x="108" y="206" font-size="30" font-weight="700" fill="#9ec5e0">Das LLM</text>
+    <g font-size="16" fill="#d0dce0">
+      <circle cx="116" cy="244" r="3.5" fill="#7aa3c2"/><text x="132" y="249">Reasoning-Engine</text>
+      <circle cx="116" cy="276" r="3.5" fill="#7aa3c2"/><text x="132" y="281">versteht Sprache</text>
+      <circle cx="116" cy="308" r="3.5" fill="#7aa3c2"/><text x="132" y="313">trifft Entscheidungen</text>
+    </g>
+  </g>
+
+  <!-- ═══ Loop box (top-right, green) ═══ -->
+  <g>
+    <rect x="820" y="160" width="380" height="220" rx="14"
+          fill="#141e16" stroke="#66bb6a" stroke-width="2"/>
+    <text x="848" y="206" font-size="30" font-weight="700" fill="#8fdb93">Der Loop</text>
+    <g font-size="16" fill="#d0e0d0">
+      <circle cx="856" cy="244" r="3.5" fill="#66bb6a"/><text x="872" y="249">läuft, bis die Task fertig ist</text>
+      <circle cx="856" cy="276" r="3.5" fill="#66bb6a"/><text x="872" y="281">stoppt nicht nach einer</text>
+      <text x="872" y="304">einzelnen Antwort</text>
+    </g>
+  </g>
+
+  <!-- ═══ Tools box (bottom-left, copper) ═══ -->
+  <g>
+    <rect x="80" y="420" width="380" height="240" rx="14"
+          fill="#261812" stroke="#c87a4e" stroke-width="2"/>
+    <text x="108" y="466" font-size="30" font-weight="700" fill="#e09678">Die Tools</text>
+    <g font-size="16" fill="#e0d0c8">
+      <circle cx="116" cy="500" r="3.5" fill="#c87a4e"/><text x="132" y="505">Files lesen</text>
+      <circle cx="116" cy="532" r="3.5" fill="#c87a4e"/><text x="132" y="537">Code ausführen</text>
+      <circle cx="116" cy="564" r="3.5" fill="#c87a4e"/><text x="132" y="569">Web durchsuchen</text>
+      <circle cx="116" cy="596" r="3.5" fill="#c87a4e"/><text x="132" y="601">APIs aufrufen</text>
+      <circle cx="116" cy="628" r="3.5" fill="#c87a4e"/><text x="132" y="633">Files editieren</text>
+    </g>
+  </g>
+
+  <!-- ═══ Context box (bottom-right, gold) ═══ -->
+  <g>
+    <rect x="820" y="420" width="380" height="240" rx="14"
+          fill="#1e1a12" stroke="#c8a44e" stroke-width="2"/>
+    <text x="848" y="466" font-size="30" font-weight="700" fill="#e0c878">Der Context</text>
+    <g font-size="16" fill="#e0d8b8">
+      <circle cx="856" cy="500" r="3.5" fill="#c8a44e"/><text x="872" y="505">Identity-Files</text>
+      <circle cx="856" cy="532" r="3.5" fill="#c8a44e"/><text x="872" y="537">Conversation History</text>
+      <circle cx="856" cy="564" r="3.5" fill="#c8a44e"/><text x="872" y="569">Memory</text>
+      <circle cx="856" cy="596" r="3.5" fill="#c8a44e"/><text x="872" y="601">Skills</text>
+    </g>
+  </g>
+
+  <!-- ═══ Arrows from each box to AI Agent center pill ═══
+       Pille: x=530, y=335, w=220, h=100, rx=50 (Halbkugel-Kanten Radius 50)
+       Linke Halbkugel-Mitte (580, 385), rechte (700, 385), Radius 50
+       Bei y=358 (oben) und y=412 (unten): 27 px von Pille-Mitte entfernt
+       → Tangenten-x = 580 ± sqrt(50²-27²) = 580 ± 42 = 538/622 (links) bzw. 658/742 (rechts)
+       Pfeile enden 2 px vor Tangente: links x=536, rechts x=744 -->
+  <line x1="460" y1="320" x2="536" y2="358" stroke="#888" stroke-width="2" marker-end="url(#harness-arrow)"/>
+  <line x1="820" y1="320" x2="744" y2="358" stroke="#888" stroke-width="2" marker-end="url(#harness-arrow)"/>
+  <line x1="460" y1="450" x2="536" y2="412" stroke="#888" stroke-width="2" marker-end="url(#harness-arrow)"/>
+  <line x1="820" y1="450" x2="744" y2="412" stroke="#888" stroke-width="2" marker-end="url(#harness-arrow)"/>
+
+  <!-- ═══ AI Agent center (gold pill) — Sub raus (redundant zum Header), Headline vertikal zentriert ═══ -->
+  <g>
+    <rect x="530" y="335" width="220" height="100" rx="50"
+          fill="#1a1812" stroke="#c8a44e" stroke-width="2.5"/>
+    <text x="640" y="396" text-anchor="middle" font-size="32" font-weight="700" fill="#c8a44e" letter-spacing="0.3">AI Agent</text>
+  </g>
+</svg>

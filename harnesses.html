@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Agent Harnesses — AO Projects</title>
-<meta name="description" content="Agent Harnesses — Das System hinter John. OpenClaw, Claude Code Desktop, Cowork, Cloud Routines.">
+<meta name="description" content="Agent Harnesses — Das System hinter John. OpenClaw, Claude Code, Cowork, Cloud Routines.">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +22,7 @@
     </a>
     <div class="nav-links">
       <a href="john.html">John</a>
+      <a href="joanna.html">Joanna</a>
       <a href="harnesses.html" class="active">Agent Harnesses</a>
       <a href="about.html">About</a>
     </div>
@@ -34,6 +35,7 @@
 <div class="mobile-menu">
   <a href="index.html" onclick="this.parentElement.classList.remove('open')">Home</a>
   <a href="john.html" onclick="this.parentElement.classList.remove('open')">John</a>
+  <a href="joanna.html" onclick="this.parentElement.classList.remove('open')">Joanna</a>
   <a href="harnesses.html" onclick="this.parentElement.classList.remove('open')">Agent Harnesses</a>
   <a href="about.html" onclick="this.parentElement.classList.remove('open')">About</a>
 </div>
@@ -41,55 +43,122 @@
 <!-- Hero -->
 <section class="subpage-hero">
   <div class="container">
+    <div class="avatar-wrap">
+      <img src="assets/harness-hero.jpg" alt="Agent Harness — Network Sphere" width="400" height="400" decoding="async">
+    </div>
     <h1>Agent Harnesses</h1>
-    <p class="subtitle">Das System hinter John. OpenClaw, Claude Code Desktop, Cowork, Cloud Routines.</p>
+    <p class="subtitle">Das System hinter John und Joanna.</p>
   </div>
 </section>
 
-<!-- Was ist ein Agent Harness — SKELETON -->
+<!-- Was ist ein Agent Harness -->
 <section class="content-section">
   <div class="container">
-    <span class="section-label fade-in">Was ist das</span>
-    <h2 class="section-title fade-in">Was ist ein Agent Harness?</h2>
+    <span class="section-label fade-in">Mehr als ein Sprachmodell</span>
+    <h2 class="section-title fade-in">Ohne Harness kein Agent.</h2>
     <div class="section-text fade-in">
-      <p><em>Skeleton — Inhalt kommt in Step 4.</em></p>
+      <p>Ein KI-Agent ist nicht nur ein Sprachmodell. Er besteht aus weiteren Bestandteilen, die ihn handlungsfähig machen: das <strong>LLM</strong> als Reasoning-Engine, <strong>Tools</strong>, mit denen er die Welt verändert, ein <strong>Loop</strong>, der ihn weitermachen lässt bis die Aufgabe erledigt ist, und <strong>Context</strong>, der ihm erzählt wer er ist und was vorher passiert ist.</p>
+      <p>Diese vier Teile zusammen — das ist ein Agent Harness.</p>
+    </div>
+
+    <!-- Diagramm: Agent Harness Components -->
+    <div class="diagram-wrap fade-in">
+      <object type="image/svg+xml" data="assets/diagrams/agent-harness.svg?v=5" aria-label="Diagramm: AI Agent als Kombination aus LLM (Reasoning), Tools (Aktionen), Loop (Persistenz) und Context (Identität, Memory, Skills)">
+        <a href="assets/diagrams/agent-harness.svg?v=5">Diagramm: Was ist ein Agent Harness?</a>
+      </object>
     </div>
   </div>
 </section>
 
-<!-- Mein Stack — SKELETON -->
+<!-- Mein Stack -->
 <section class="content-section">
   <div class="container">
     <span class="section-label fade-in">Mein Stack</span>
-    <h2 class="section-title fade-in">Vier Harnesses, vier Aufgaben.</h2>
+    <h2 class="section-title fade-in">Meine Harnesses.</h2>
     <div class="section-text fade-in">
-      <p><em>Skeleton — Karten für OpenClaw / Claude Code Desktop / Cowork / Cloud Routines kommen in Step 4.</em></p>
+      <p>Mehrere Harnesses parallel — bewusst als Experiment. Welches Setup liefert was, wo sind die Schwächen, was lässt sich daraus über die Nutzung und vor allem über die Nutzbarkeit der Ergebnisse ableiten. Plus Obsidian darunter — das gemeinsame Gedächtnis.</p>
+    </div>
+
+    <div class="harness-grid fade-in">
+      <!-- Karte 1 — OpenClaw + Claude Code -->
+      <div class="harness-card harness-card--openclaw">
+        <span class="harness-badge harness-badge--openclaw">Aktiv</span>
+        <img class="harness-logo" src="assets/logo-openclaw.svg" alt="OpenClaw Logo (Pixel Lobster)">
+        <h3>OpenClaw + Claude Code</h3>
+        <p class="harness-sub">Johns Master · CLI · lokal</p>
+        <ul class="harness-bullets">
+          <li>Identity-Files, 11 Skills, Hooks, Heartbeat — vieles Custom Built</li>
+          <li>Läuft als CLI in Claude Code — Anthropic-Subscription statt API-Token, nur Usage-Limits</li>
+          <li>Mein erster Versuch mit Agentic AI — Learning by Doing</li>
+          <li>Discord-Hub, Telegram, Kanban-Board, MCPs (Obsidian, Excalidraw, GitHub)</li>
+        </ul>
+      </div>
+
+      <!-- Karte 2 — Claude Desktop App -->
+      <div class="harness-card harness-card--anthropic">
+        <span class="harness-badge harness-badge--anthropic">Aktiv</span>
+        <img class="harness-logo" src="assets/logo-anthropic.svg" alt="Anthropic Logo">
+        <h3>Claude Desktop App</h3>
+        <p class="harness-sub">Claude Code in der GUI · Multi-Session</p>
+        <ul class="harness-bullets">
+          <li>Hier überwache ich OpenClaw und arbeite parallel an anderen Projekten</li>
+          <li>Mehrere Claude-Code-Sessions in einem Fenster, Drag-and-drop-Panes, integriertes Terminal</li>
+          <li>Andere Arbeit als bei John — Planung, Ad-hoc-Tasks, kurze Brainstorms</li>
+          <li>ChatGPT und claude.ai parallel als reine Chat-Tools, nicht als Harness</li>
+        </ul>
+      </div>
+
+      <!-- Karte 3 — Hermes (Joanna) — Hermes-Brand-Gold -->
+      <div class="harness-card harness-card--hermes">
+        <span class="harness-badge harness-badge--hermes">Aktiv</span>
+        <img class="harness-logo" src="assets/logo-hermes.svg" alt="Hermes Logo">
+        <h3>Hermes</h3>
+        <p class="harness-sub">Joannas Heimat · GPT-5 · Open-Source</p>
+        <ul class="harness-bullets">
+          <li>Jünger als OpenClaw — Open-Source unter MIT-Lizenz</li>
+          <li>Persistentes Memory wächst autonom über Sessions — kein manuelles Pflegen</li>
+          <li>Self-Improving Skills — werden nach komplexen Tasks angelegt und schärfen sich im Einsatz</li>
+        </ul>
+      </div>
+
+      <!-- Karte 4 — Hermes lokal (mit Gemma als Provider) -->
+      <div class="harness-card harness-card--neutral">
+        <span class="harness-badge harness-badge--neutral">Angedacht</span>
+        <img class="harness-logo" src="assets/logo-local.svg" alt="Lokal · On-Device">
+        <h3>Hermes lokal</h3>
+        <p class="harness-sub">Gemma 4 · on-device · privacy-first</p>
+        <ul class="harness-bullets">
+          <li>Hermes-Setup mit lokalem Open-Weights-Modell statt Cloud-Provider</li>
+          <li>Daten verlassen den Mac nicht — kein Token-Counter, keine Cloud-Kosten</li>
+          <li>Spannende Option als kostenlose Alternative zu den bezahlten Modellen</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Obsidian Foundation-Strip -->
+    <div class="harness-foundation fade-in">
+      <img class="harness-logo harness-logo--foundation" src="assets/logo-obsidian.svg" alt="Obsidian Logo">
+      <span class="foundation-label">Knowledge-Layer</span>
+      <h3>Obsidian Vault</h3>
+      <p>Alles, was Wissen ist, liegt hier — Memory, Drafts, Logs, Projekt-Notizen, Persona-Dokumentation. Alle Harnesses greifen via REST-API und MCP-Server drauf zu. Ausnahme: die Identity-Master-Files von OpenClaw und Hermes selbst — die liegen lokal bei den Harnesses, nicht im Vault.</p>
     </div>
   </div>
 </section>
 
-<!-- Architektur — SKELETON -->
+<!-- Architektur — wie alles zusammenhängt -->
 <section class="content-section">
   <div class="container">
     <span class="section-label fade-in">Architektur</span>
-    <h2 class="section-title fade-in">Wie es zusammenspielt.</h2>
+    <h2 class="section-title fade-in">Wie alles zusammenhängt.</h2>
     <div class="section-text fade-in">
-      <p><em>Skeleton — Excalidraw-Diagramm wird in Step 2 gebaut, hier in Step 4 eingebunden.</em></p>
+      <p>Alle drei Harnesses können miteinander kommunizieren — über den geteilten Vault als gemeinsamen Knowledge-Layer. Letztendlich tun sie etwas Ähnliches: ein Sprachmodell handlungsfähig machen, mit Sebastian und der Welt verbinden, Ergebnisse liefern. Trotzdem sind sie in ihrer Funktionsweise unterschiedlich — und liefern unterschiedliche Ergebnisse. Genau das ist der Punkt: parallel laufen lassen, vergleichen, lernen, welches Setup welcher Aufgabe am besten gerecht wird.</p>
     </div>
-  </div>
-</section>
 
-<!-- Install-CTA — SKELETON -->
-<section class="content-section">
-  <div class="container">
-    <span class="section-label fade-in">Selber bauen</span>
-    <h2 class="section-title fade-in">So baust du dir das selbst.</h2>
-    <div class="section-text fade-in">
-      <p>Eine Schritt-für-Schritt-Anleitung, wie du OpenClaw installierst und das initiale Setup machst.</p>
+    <div class="diagram-wrap fade-in">
+      <object type="image/svg+xml" data="assets/diagrams/architecture.svg?v=10" aria-label="Architektur-Diagramm: Anthropic Claude und OpenAI GPT-5.5 als Provider, OpenClaw + Claude Code, Claude Desktop App und Hermes als Harnesses, Obsidian Vault als gemeinsamer Knowledge-Layer, lokale Tools und Multi-Channel-Gateway als Output-Kanäle">
+        <a href="assets/diagrams/architecture.svg?v=10">Diagramm: Wie alles zusammenhängt</a>
+      </object>
     </div>
-    <p class="fade-in" style="text-align:center; margin-top:24px;">
-      <a href="install-openclaw.html" class="github-link">Zum Install-Guide &rarr;</a>
-    </p>
   </div>
 </section>
 
