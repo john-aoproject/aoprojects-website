@@ -54,6 +54,23 @@
   </div>
 </section>
 
+<!-- Intro-Video — autoplay 3x dann stop -->
+<section class="intro-video-section">
+  <div class="container">
+    <div class="intro-video-wrap fade-in">
+      <video
+        id="intro-video"
+        src="assets/intro.mp4"
+        poster="assets/img-harnesses-card.jpg"
+        muted
+        playsinline
+        preload="metadata"
+        aria-label="AO Projects — Intro: John und Joanna stellen sich vor"
+      ></video>
+    </div>
+  </div>
+</section>
+
 <!-- Projects -->
 <section style="padding-top: 0;">
   <div class="container">
@@ -134,6 +151,36 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Intro-Video: 3x autoplay, dann anhalten und Poster zeigen
+(function() {
+  const video = document.getElementById('intro-video');
+  if (!video) return;
+  let plays = 0;
+  const MAX_PLAYS = 3;
+
+  // Erstes Auto-Play sobald die Section sichtbar wird
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && plays === 0) {
+        video.play().catch(() => { /* autoplay blocked, user must click */ });
+      }
+    });
+  }, { threshold: 0.4 });
+  videoObserver.observe(video);
+
+  video.addEventListener('ended', () => {
+    plays += 1;
+    if (plays < MAX_PLAYS) {
+      video.currentTime = 0;
+      video.play().catch(() => {});
+    } else {
+      // nach 3 Durchläufen: Poster zeigen, Klick startet erneut
+      video.load(); // Reset auf Poster
+      video.controls = true;
+    }
+  });
+})();
 </script>
 
 </body>
