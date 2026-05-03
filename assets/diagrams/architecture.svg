@@ -2,7 +2,7 @@
      aria-labelledby="arch-title arch-desc"
      style="font-family:Inter,system-ui,sans-serif;">
   <title id="arch-title">Wie alles zusammenhängt</title>
-  <desc id="arch-desc">Geschichteter Architektur-Stack: LLM Layer (Anthropic Claude, OpenAI GPT-5, Google Gemma 4), Harness Layer (OpenClaw mit Agent John, Claude Desktop, Hermes mit Joanna, Hermes lokal), Knowledge-Base Obsidian Vault, Comms Layer (Mail, Telegram, Discord, Anthropic-App, Hermes-Gateway).</desc>
+  <desc id="arch-desc">Geschichteter Architektur-Stack: LLM Layer (Anthropic Claude, OpenAI GPT-5.5, Google Gemma 4), Harness Layer (OpenClaw mit Agent John, Claude Desktop, Hermes mit Joanna, Hermes lokal), Knowledge-Base Obsidian Vault, Comms Layer (Mail, Telegram, Discord, Anthropic-App, Hermes-Gateway).</desc>
 
   <defs>
     <marker id="arrow-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
@@ -43,10 +43,10 @@
     <text x="330" y="206" text-anchor="middle" font-size="12" fill="#a89878" letter-spacing="1">Sonnet · Opus</text>
   </g>
 
-  <!-- LLM 2: OpenAI GPT-5 — vertikal über Hermes (mid=720) -->
+  <!-- LLM 2: OpenAI GPT-5.5 — vertikal über Hermes (mid=720) -->
   <g>
     <rect x="600" y="150" width="240" height="70" rx="10" fill="#1a1a1a" stroke="#aab0b8" stroke-width="2"/>
-    <text x="720" y="184" text-anchor="middle" font-size="18" font-weight="700" fill="#e0e0e0">OpenAI GPT-5</text>
+    <text x="720" y="184" text-anchor="middle" font-size="18" font-weight="700" fill="#e0e0e0">OpenAI GPT-5.5</text>
     <text x="720" y="206" text-anchor="middle" font-size="12" fill="#888" letter-spacing="1">Cloud-API</text>
   </g>
 
