@@ -28,6 +28,8 @@ ul{list-style:none}
 .theme-john {
   --accent: #c8a44e;
   --accent-glow: rgba(200, 164, 78, 0.12);
+  --avatar-ring: #e81b25;
+  --avatar-ring-glow: rgba(232, 27, 37, 0.20);
 }
 
 /* Joanna — Lavendel als Akzent (zweite Persona neben John, eigenständig) */
@@ -35,6 +37,8 @@ ul{list-style:none}
   --accent: #b3a2ff;
   --accent-glow: rgba(179, 162, 255, 0.14);
   --gold: #e8e4ff;
+  --avatar-ring: #b3a2ff;
+  --avatar-ring-glow: rgba(179, 162, 255, 0.20);
 }
 
 /* Agent Harnesses — Weiss als Akzent (Brand-Palette: Schwarz/Rot/Weiss/Gold) */
@@ -42,6 +46,8 @@ ul{list-style:none}
   --accent: #ffffff;
   --accent-glow: rgba(255, 255, 255, 0.10);
   --gold: #ffffff;
+  --avatar-ring: #c8a44e;
+  --avatar-ring-glow: rgba(200, 164, 78, 0.20);
 }
 
 /* Install / Tutorial — Weiss wie Harnesses (gleiche Familie) */
@@ -55,6 +61,8 @@ ul{list-style:none}
 .theme-about {
   --accent: #c8a44e;
   --accent-glow: rgba(200, 164, 78, 0.12);
+  --avatar-ring: #ffffff;
+  --avatar-ring-glow: rgba(255, 255, 255, 0.12);
 }
 
 /* ===== Typography ===== */
@@ -258,8 +266,8 @@ section { padding: 60px 0; }
 .subpage-hero .avatar-wrap {
   width: 160px; height: 160px; border-radius: 50%; margin: 0 auto 24px;
   padding: 3px;
-  background: conic-gradient(var(--gold), transparent, var(--gold));
-  box-shadow: 0 0 40px var(--accent-glow);
+  background: conic-gradient(var(--avatar-ring, var(--gold)), transparent, var(--avatar-ring, var(--gold)));
+  box-shadow: 0 0 40px var(--avatar-ring-glow, var(--accent-glow));
 }
 .subpage-hero .avatar-wrap img {
   width: 100%; height: 100%; border-radius: 50%; object-fit: cover;
