@@ -14,7 +14,7 @@
   <style>
     .cta-pill { cursor: pointer; }
     .cta-pill .cta-bg { transition: fill 0.25s ease, stroke 0.25s ease; }
-    .cta-pill:hover .cta-bg { fill: #2a1f12; stroke: #e0c878; }
+    .cta-pill:hover .cta-bg { fill: #2a1812; stroke: #FFD9C4; }
     .cta-pill:hover .cta-glow { opacity: 0.95; }
     .cta-glow { animation: cta-glow-pulse 2.6s ease-in-out infinite; }
     @keyframes cta-glow-pulse {
@@ -41,36 +41,36 @@
   <!-- ═══════════════════════ CARD: OPENCLAW (LINKS) ═══════════════════════ -->
   <g>
     <rect x="80" y="160" width="460" height="800" rx="14"
-          fill="#1a1812" stroke="#c8a44e" stroke-width="1.5"/>
+          fill="#1a1310" stroke="#FFC4A8" stroke-width="1.5"/>
     <g text-anchor="middle">
       <text x="310" y="210" font-size="28" font-weight="700" fill="#f0f0f0">OpenClaw</text>
       <text x="310" y="240" font-size="15" fill="#888" letter-spacing="0.3">voller Master · lokale Runtime</text>
     </g>
 
     <!-- IDENTITY-FILES -->
-    <text x="115" y="290" font-family="JetBrains Mono, monospace" font-size="20" font-weight="700" fill="#c8a44e" letter-spacing="2">IDENTITY (MASTER)</text>
+    <text x="115" y="290" font-family="JetBrains Mono, monospace" font-size="20" font-weight="700" fill="#FFC4A8" letter-spacing="2">IDENTITY (MASTER)</text>
     <g font-size="17" fill="#e0e0e0">
-      <circle cx="122" cy="319" r="3.5" fill="#c8a44e"/><text x="140" y="324"><tspan font-weight="600">SOUL.md</tspan>  +  <tspan font-weight="600">IDENTITY.md</tspan></text>
-      <circle cx="122" cy="349" r="3.5" fill="#c8a44e"/><text x="140" y="354"><tspan font-weight="600">AGENTS.md</tspan></text>
-      <circle cx="122" cy="379" r="3.5" fill="#c8a44e"/><text x="140" y="384"><tspan font-weight="600">USER.md</tspan>  +  <tspan font-weight="600">USER-DETAIL.md</tspan></text>
-      <circle cx="122" cy="409" r="3.5" fill="#c8a44e"/><text x="140" y="414"><tspan font-weight="600">MEMORY.md</tspan></text>
+      <circle cx="122" cy="319" r="3.5" fill="#FFC4A8"/><text x="140" y="324"><tspan font-weight="600">SOUL.md</tspan>  +  <tspan font-weight="600">IDENTITY.md</tspan></text>
+      <circle cx="122" cy="349" r="3.5" fill="#FFC4A8"/><text x="140" y="354"><tspan font-weight="600">AGENTS.md</tspan></text>
+      <circle cx="122" cy="379" r="3.5" fill="#FFC4A8"/><text x="140" y="384"><tspan font-weight="600">USER.md</tspan>  +  <tspan font-weight="600">USER-DETAIL.md</tspan></text>
+      <circle cx="122" cy="409" r="3.5" fill="#FFC4A8"/><text x="140" y="414"><tspan font-weight="600">MEMORY.md</tspan></text>
     </g>
 
     <!-- + KOMPONENTEN -->
-    <text x="115" y="455" font-family="JetBrains Mono, monospace" font-size="20" font-weight="700" fill="#c8a44e" letter-spacing="2">+ KOMPONENTEN</text>
+    <text x="115" y="455" font-family="JetBrains Mono, monospace" font-size="20" font-weight="700" fill="#FFC4A8" letter-spacing="2">+ KOMPONENTEN</text>
     <g font-size="17" fill="#e0e0e0">
-      <circle cx="122" cy="484" r="3.5" fill="#c8a44e"/><text x="140" y="489">12+ Custom Skills</text>
-      <circle cx="122" cy="514" r="3.5" fill="#c8a44e"/><text x="140" y="519">Hooks <tspan fill="#888">(Whitelist, Heartbeat)</tspan></text>
-      <circle cx="122" cy="544" r="3.5" fill="#c8a44e"/><text x="140" y="549">MCP-Server <tspan fill="#888">(Obsidian, Excalidraw, GH)</tspan></text>
-      <circle cx="122" cy="574" r="3.5" fill="#c8a44e"/><text x="140" y="579">Services <tspan fill="#888">(Kanban, Discord-Hub)</tspan></text>
-      <circle cx="122" cy="604" r="3.5" fill="#c8a44e"/><text x="140" y="609">Heartbeat + LaunchAgents</text>
+      <circle cx="122" cy="484" r="3.5" fill="#FFC4A8"/><text x="140" y="489">12+ Custom Skills</text>
+      <circle cx="122" cy="514" r="3.5" fill="#FFC4A8"/><text x="140" y="519">Hooks <tspan fill="#888">(Whitelist, Heartbeat)</tspan></text>
+      <circle cx="122" cy="544" r="3.5" fill="#FFC4A8"/><text x="140" y="549">MCP-Server <tspan fill="#888">(Obsidian, Excalidraw, GH)</tspan></text>
+      <circle cx="122" cy="574" r="3.5" fill="#FFC4A8"/><text x="140" y="579">Services <tspan fill="#888">(Kanban, Discord-Hub)</tspan></text>
+      <circle cx="122" cy="604" r="3.5" fill="#FFC4A8"/><text x="140" y="609">Heartbeat + LaunchAgents</text>
     </g>
 
     <!-- Divider -->
     <line x1="115" y1="640" x2="505" y2="640" stroke="#3a3528" stroke-width="1"/>
 
     <!-- WAS ICH KANN -->
-    <text x="115" y="670" font-family="JetBrains Mono, monospace" font-size="20" font-weight="700" fill="#c8a44e" letter-spacing="2">WAS ICH KANN</text>
+    <text x="115" y="670" font-family="JetBrains Mono, monospace" font-size="20" font-weight="700" fill="#FFC4A8" letter-spacing="2">WAS ICH KANN</text>
     <g font-size="17" fill="#e0e0e0">
       <text x="120" y="703" font-size="20" font-weight="700" fill="#66bb6a">✓</text><text x="148" y="703">Antworten · Denken · Beraten</text>
       <text x="120" y="731" font-size="20" font-weight="700" fill="#66bb6a">✓</text><text x="148" y="731">Persönlichkeit · Stil · Tonalität</text>
@@ -81,7 +81,7 @@
     </g>
 
     <!-- Läuft in -->
-    <text x="115" y="892" font-family="JetBrains Mono, monospace" font-size="20" font-weight="700" fill="#c8a44e" letter-spacing="2">LÄUFT MIT</text>
+    <text x="115" y="892" font-family="JetBrains Mono, monospace" font-size="20" font-weight="700" fill="#FFC4A8" letter-spacing="2">LÄUFT MIT</text>
     <text x="115" y="924" font-size="17" fill="#e0e0e0"><tspan font-weight="600">Claude Code</tspan>  <tspan fill="#888">(lokal · Multi-Session)</tspan></text>
   </g>
 
@@ -178,14 +178,14 @@
   <a href="harnesses.html" target="_top" class="cta-pill">
     <!-- pulsierender Glow-Ring -->
     <rect class="cta-glow" x="312" y="1208" width="616" height="84" rx="42"
-          fill="none" stroke="#c8a44e" stroke-width="2"/>
+          fill="none" stroke="#FFC4A8" stroke-width="2"/>
     <!-- Pille -->
     <rect class="cta-bg" x="320" y="1216" width="600" height="68" rx="34"
-          fill="#1a1812" stroke="#c8a44e" stroke-width="2.5"/>
+          fill="#1a1310" stroke="#FFC4A8" stroke-width="2.5"/>
     <!-- Großer Label-Text — Agent Harnesses + animierter Pfeil, beide separat zentriert
          Block-Berechnung: "Agent Harnesses" 32 Bold ~257 px, Gap 20, Pfeil 34 ~30
          → Block-Breite 307, Block zentriert bei Pille-Mitte 620 -->
-    <text x="595" y="1268" text-anchor="middle" font-size="32" font-weight="700" fill="#c8a44e" letter-spacing="0.3">Agent Harnesses</text>
-    <text class="cta-arrow" x="759" y="1268" text-anchor="middle" font-size="34" font-weight="700" fill="#c8a44e">→</text>
+    <text x="595" y="1268" text-anchor="middle" font-size="32" font-weight="700" fill="#FFC4A8" letter-spacing="0.3">Agent Harnesses</text>
+    <text class="cta-arrow" x="759" y="1268" text-anchor="middle" font-size="34" font-weight="700" fill="#FFC4A8">→</text>
   </a>
 </svg>

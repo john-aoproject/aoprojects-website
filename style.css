@@ -24,28 +24,28 @@ ul{list-style:none}
   --nav-bg: rgba(12, 12, 12, 0.92);
 }
 
-/* John — Gold als Akzent */
+/* John — Pastell-Pfirsich als Persona-Akzent (warm, komplementär zu Joanna-Lavendel) */
 .theme-john {
-  --accent: #c8a44e;
-  --accent-glow: rgba(200, 164, 78, 0.12);
-  --avatar-ring: #e81b25;
-  --avatar-ring-glow: rgba(232, 27, 37, 0.20);
+  --accent: #FFC4A8;
+  --accent-glow: rgba(255, 196, 168, 0.18);
+  --avatar-ring: #FFC4A8;
+  --avatar-ring-glow: rgba(255, 196, 168, 0.22);
 }
 
 /* Joanna — Lavendel als Akzent (zweite Persona neben John, eigenständig) */
+/* --gold bewusst NICHT überschrieben: Section-Label bleibt Brand-Gold global */
 .theme-joanna {
   --accent: #b3a2ff;
   --accent-glow: rgba(179, 162, 255, 0.14);
-  --gold: #e8e4ff;
   --avatar-ring: #b3a2ff;
   --avatar-ring-glow: rgba(179, 162, 255, 0.20);
 }
 
 /* Agent Harnesses — Weiss als Akzent (Brand-Palette: Schwarz/Rot/Weiss/Gold) */
+/* --gold NICHT überschrieben: Section-Label bleibt Brand-Gold; Avatar-Ring = Gold (= AOProjects-Brand-Standard für neutrale Subpages) */
 .theme-harnesses {
   --accent: #ffffff;
   --accent-glow: rgba(255, 255, 255, 0.10);
-  --gold: #ffffff;
   --avatar-ring: #c8a44e;
   --avatar-ring-glow: rgba(200, 164, 78, 0.20);
 }
@@ -54,10 +54,9 @@ ul{list-style:none}
 .theme-install {
   --accent: #ffffff;
   --accent-glow: rgba(255, 255, 255, 0.10);
-  --gold: #ffffff;
 }
 
-/* About — Gold als Akzent (wie John) */
+/* About — Gold als Akzent (Sebastian = neutrale Persona, kein eigener Persona-Marker) */
 .theme-about {
   --accent: #c8a44e;
   --accent-glow: rgba(200, 164, 78, 0.12);
@@ -224,8 +223,8 @@ section { padding: 60px 0; }
 
 /* Per-card accent */
 .project-card--john {
-  --card-accent: #e81b25;
-  --card-glow: rgba(232, 27, 37, 0.18);
+  --card-accent: #FFC4A8;
+  --card-glow: rgba(255, 196, 168, 0.22);
 }
 .project-card--joanna {
   --card-accent: #b3a2ff;
