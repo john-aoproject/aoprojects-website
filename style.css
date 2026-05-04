@@ -208,13 +208,6 @@ section { padding: 60px 0; }
   width: 100%; height: 200px; object-fit: cover;
   border-bottom: 1px solid var(--border);
 }
-.project-card-placeholder {
-  width: 100%; height: 200px;
-  background: var(--surface-2);
-  display: flex; align-items: center; justify-content: center;
-  border-bottom: 1px solid var(--border);
-  position: relative; overflow: hidden;
-}
 .project-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
 .project-card-label {
   font-size: 0.75rem; font-weight: 600; letter-spacing: 1.5px;
@@ -773,26 +766,6 @@ section { padding: 60px 0; }
   box-shadow: 0 0 40px var(--accent-glow);
 }
 .about-photo-wrap img { width: 100%; height: 100%; object-fit: cover; }
-
-/* ===== Placeholder for Midjourney ===== */
-.mj-placeholder {
-  background: var(--surface-2); border: 2px dashed var(--border);
-  border-radius: 12px; display: flex; flex-direction: column;
-  align-items: center; justify-content: center; padding: 24px;
-  min-height: 200px; max-width: 800px; margin: 24px auto;
-}
-.mj-placeholder .mj-label {
-  font-size: 0.7rem; color: var(--gold); font-weight: 600;
-  text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;
-}
-.mj-placeholder .mj-prompt {
-  font-size: 0.7rem; color: var(--muted); opacity: 0.6;
-  font-family: 'JetBrains Mono', monospace; text-align: center;
-  line-height: 1.5; max-width: 500px;
-}
-.mj-placeholder .mj-size {
-  font-size: 0.65rem; color: var(--muted); opacity: 0.4; margin-top: 8px;
-}
 
 /* ===== GitHub Link ===== */
 .github-link {
