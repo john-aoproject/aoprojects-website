@@ -175,7 +175,7 @@
   </g>
 
   <!-- ═══════════════════════ CTA — animierter goldener Übergang zur Harnesses-Seite ═══════════════════════ -->
-  <a href="harnesses.html" target="_top" class="cta-pill">
+  <a href="/harnesses.html" target="_top" class="cta-pill">
     <!-- pulsierender Glow-Ring -->
     <rect class="cta-glow" x="312" y="1208" width="616" height="84" rx="42"
           fill="none" stroke="#FFC4A8" stroke-width="2"/>
