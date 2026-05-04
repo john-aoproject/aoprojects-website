@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1480 920" role="img"
+     aria-labelledby="arch-title arch-desc"
+     style="font-family:Inter,system-ui,sans-serif;">
+  <title id="arch-title">Wie alles zusammenhängt</title>
+  <desc id="arch-desc">Geschichteter Architektur-Stack: LLM Layer (Anthropic Claude, OpenAI GPT-5.5, Google Gemma 4), Harness Layer (OpenClaw mit Agent John, Claude Desktop, Hermes mit Joanna, Hermes lokal), Knowledge-Base Obsidian Vault, Comms Layer (Mail, Telegram, Discord, Anthropic-App, Hermes-Gateway).</desc>
+
+  <defs>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+    <marker id="arrow-coral" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c87a4e"/>
+    </marker>
+    <marker id="arrow-gray-light" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#aab0b8"/>
+    </marker>
+  </defs>
+
+  <!-- ═══ HEADER ═══ -->
+  <g text-anchor="middle">
+    <text x="740" y="52" font-size="36" font-weight="700" fill="#f0f0f0" letter-spacing="-0.5">Wie alles zusammenhängt</text>
+    <text x="740" y="88" font-size="16" fill="#888" letter-spacing="0.4">
+      LLM Layer  ·  Harness Layer  ·  Knowledge-Base  ·  Comms Layer
+    </text>
+  </g>
+
+  <!-- ═══════════════════════ LAYER 1 — LLM ═══════════════════════ -->
+  <!-- Container -->
+  <rect x="40" y="120" width="1100" height="120" rx="14"
+        fill="none" stroke="#5a6573" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <!-- Layer-Label rechts -->
+  <text x="1280" y="186" text-anchor="middle"
+        font-family="JetBrains Mono, monospace" font-size="18" font-weight="700"
+        fill="#aab0b8" letter-spacing="2">LLM Layer</text>
+
+  <!-- Box-Schema im Container: 4 Boxen je 240 wide, 20 lücke, x: 80/340/600/860, mid: 200/460/720/980 -->
+
+  <!-- LLM 1: Anthropic Claude — vertikal zentriert über OpenClaw + Claude Desktop (mid=330)
+       Box w=240, x=210 → mid=330 -->
+  <g>
+    <rect x="210" y="150" width="240" height="70" rx="10" fill="#261812" stroke="#c87a4e" stroke-width="2"/>
+    <text x="330" y="184" text-anchor="middle" font-size="18" font-weight="700" fill="#e09678">Anthropic Claude</text>
+    <text x="330" y="206" text-anchor="middle" font-size="12" fill="#a89878" letter-spacing="1">Sonnet · Opus</text>
+  </g>
+
+  <!-- LLM 2: OpenAI GPT-5.5 — vertikal über Hermes (mid=720) -->
+  <g>
+    <rect x="600" y="150" width="240" height="70" rx="10" fill="#1a1a1a" stroke="#aab0b8" stroke-width="2"/>
+    <text x="720" y="184" text-anchor="middle" font-size="18" font-weight="700" fill="#e0e0e0">OpenAI GPT-5.5</text>
+    <text x="720" y="206" text-anchor="middle" font-size="12" fill="#888" letter-spacing="1">Cloud-API</text>
+  </g>
+
+  <!-- LLM 3: Google Gemma 4 — vertikal über Hermes lokal (mid=980), dashed -->
+  <g>
+    <rect x="860" y="150" width="240" height="70" rx="10" fill="#161616" stroke="#7a8590" stroke-width="2" stroke-dasharray="6 4"/>
+    <text x="980" y="184" text-anchor="middle" font-size="18" font-weight="700" fill="#aab0b8">Google Gemma 4</text>
+    <text x="980" y="206" text-anchor="middle" font-size="12" fill="#5a6573" letter-spacing="1">Open-Weights · lokal</text>
+  </g>
+
+  <!-- ═══ Pfeile LLM → Harness ═══ -->
+  <!-- Anthropic (mid=330) fan-out zu OpenClaw (mid=200) und Claude Desktop (mid=460) -->
+  <line x1="280" y1="220" x2="210" y2="296" stroke="#c87a4e" stroke-width="2" marker-end="url(#arrow-coral)"/>
+  <line x1="380" y1="220" x2="450" y2="296" stroke="#c87a4e" stroke-width="2" marker-end="url(#arrow-coral)"/>
+  <!-- OpenAI (mid=720) → Hermes (mid=720), vertikal -->
+  <line x1="720" y1="220" x2="720" y2="296" stroke="#aab0b8" stroke-width="2" marker-end="url(#arrow-gray-light)"/>
+  <!-- Gemma (mid=980) → Hermes lokal (mid=980), vertikal dashed -->
+  <line x1="980" y1="220" x2="980" y2="296" stroke="#7a8590" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow-gray)"/>
+
+  <!-- ═══════════════════════ LAYER 2 — HARNESSES ═══════════════════════ -->
+  <!-- Container -->
+  <rect x="40" y="270" width="1100" height="200" rx="14"
+        fill="none" stroke="#5a6573" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <!-- Layer-Label rechts -->
+  <text x="1280" y="376" text-anchor="middle"
+        font-family="JetBrains Mono, monospace" font-size="18" font-weight="700"
+        fill="#aab0b8" letter-spacing="2">Harness Layer</text>
+
+  <!-- Harness 1: OpenClaw (x=80, w=240, mid=200) -->
+  <g>
+    <rect x="80" y="300" width="240" height="150" rx="12" fill="#1a0c0d" stroke="#e81b25" stroke-width="2.5"/>
+    <text x="200" y="334" text-anchor="middle" font-size="20" font-weight="700" fill="#f74450">OpenClaw</text>
+    <text x="200" y="358" text-anchor="middle" font-size="13" fill="#c87078" letter-spacing="0.5">Agent John</text>
+    <line x1="110" y1="378" x2="290" y2="378" stroke="#3a1c1d" stroke-width="1"/>
+    <text x="200" y="404" text-anchor="middle" font-size="12" fill="#e0c0c4">11 custom Skills</text>
+    <text x="200" y="424" text-anchor="middle" font-size="12" fill="#c87078">Hooks · Heartbeat</text>
+    <text x="200" y="444" text-anchor="middle" font-size="12" fill="#c87078">Identity-Files lokal</text>
+  </g>
+
+  <!-- Harness 2: Claude Desktop (x=340, w=240, mid=460) -->
+  <g>
+    <rect x="340" y="300" width="240" height="150" rx="12" fill="#261812" stroke="#c87a4e" stroke-width="2"/>
+    <text x="460" y="334" text-anchor="middle" font-size="20" font-weight="700" fill="#e09678">Claude Desktop</text>
+    <text x="460" y="358" text-anchor="middle" font-size="13" fill="#a87858" letter-spacing="0.5">App · GUI</text>
+    <line x1="370" y1="378" x2="550" y2="378" stroke="#3a2218" stroke-width="1"/>
+    <text x="460" y="404" text-anchor="middle" font-size="12" fill="#e0d0c0">Multi-Session</text>
+    <text x="460" y="424" text-anchor="middle" font-size="12" fill="#a87858">Drag-Panes · Terminal</text>
+    <text x="460" y="444" text-anchor="middle" font-size="12" fill="#a87858">Side-Projects</text>
+  </g>
+
+  <!-- Harness 3: Hermes (x=600, w=240, mid=720, GRÜN-TEAL) -->
+  <g>
+    <rect x="600" y="300" width="240" height="150" rx="12" fill="#041c1c" stroke="#1A5B53" stroke-width="2.5"/>
+    <text x="720" y="334" text-anchor="middle" font-size="20" font-weight="700" fill="#5fdac8">Hermes</text>
+    <text x="720" y="358" text-anchor="middle" font-size="13" fill="#3a8a82" letter-spacing="0.5">Agent Joanna</text>
+    <line x1="630" y1="378" x2="810" y2="378" stroke="#0a3030" stroke-width="1"/>
+    <text x="720" y="404" text-anchor="middle" font-size="12" fill="#b0d8d0">predefined Skills</text>
+    <text x="720" y="424" text-anchor="middle" font-size="12" fill="#3a8a82">Persistent Memory</text>
+    <text x="720" y="444" text-anchor="middle" font-size="12" fill="#3a8a82">Multi-Provider</text>
+  </g>
+
+  <!-- Harness 4: Hermes lokal (x=860, w=240, mid=980, GRÜN dashed) -->
+  <g>
+    <rect x="860" y="300" width="240" height="150" rx="12" fill="#041818" stroke="#1A5B53" stroke-width="2" stroke-dasharray="6 4"/>
+    <text x="980" y="334" text-anchor="middle" font-size="20" font-weight="700" fill="#3a8a82">Hermes lokal</text>
+    <text x="980" y="358" text-anchor="middle" font-size="11" fill="#5a7570" letter-spacing="2">ANGEDACHT</text>
+    <line x1="890" y1="378" x2="1070" y2="378" stroke="#0a2828" stroke-width="1"/>
+    <text x="980" y="404" text-anchor="middle" font-size="12" fill="#7a9590">on-device</text>
+    <text x="980" y="424" text-anchor="middle" font-size="12" fill="#5a7570">privacy-first</text>
+    <text x="980" y="444" text-anchor="middle" font-size="12" fill="#5a7570">kein Token-Counter</text>
+  </g>
+
+  <!-- ═══ Pfeile Harness → Comms (durch Vault hindurch) ═══ -->
+  <line x1="200" y1="450" x2="200" y2="636" stroke="#888" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+  <line x1="460" y1="450" x2="460" y2="636" stroke="#888" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+  <line x1="720" y1="450" x2="720" y2="636" stroke="#888" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+  <line x1="980" y1="450" x2="980" y2="636" stroke="#888" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arrow-gray)"/>
+
+  <!-- ═══════════════════════ LAYER 3 — KNOWLEDGE-BASE (Vault) ═══════════════════════ -->
+  <g>
+    <rect x="40" y="500" width="1100" height="80" rx="14" fill="#1a1626" stroke="#8a7ad4" stroke-width="2"/>
+    <text x="590" y="535" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="22" font-weight="700" fill="#b3a2ff" letter-spacing="3">OBSIDIAN</text>
+    <text x="590" y="563" text-anchor="middle" font-size="13" fill="#888" letter-spacing="0.5">Knowledge-Base · Single Source of Truth · Memory · Drafts · Logs · Persona-Docs</text>
+  </g>
+  <text x="1280" y="546" text-anchor="middle"
+        font-family="JetBrains Mono, monospace" font-size="18" font-weight="700"
+        fill="#aab0b8" letter-spacing="2">Knowledge-Base</text>
+
+  <!-- ═══════════════════════ LAYER 4 — COMMS ═══════════════════════ -->
+  <!-- Container — Box-Höhe 130 statt 100 wegen größeren Headlines -->
+  <rect x="40" y="610" width="1100" height="190" rx="14"
+        fill="none" stroke="#5a6573" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <!-- Layer-Label rechts -->
+  <text x="1280" y="711" text-anchor="middle"
+        font-family="JetBrains Mono, monospace" font-size="18" font-weight="700"
+        fill="#aab0b8" letter-spacing="2">Comms Layer</text>
+
+  <!-- Comms 1: OpenClaw — Mail, Telegram, Discord (x=80, mid=200) -->
+  <g>
+    <rect x="80" y="640" width="240" height="130" rx="12" fill="#1a0c0d" stroke="#e81b25" stroke-width="1.5"/>
+    <text x="200" y="676" text-anchor="middle" font-size="20" font-weight="700" fill="#f74450">OpenClaw</text>
+    <text x="200" y="700" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#888" letter-spacing="2">JOHN · CHANNELS</text>
+    <text x="200" y="730" text-anchor="middle" font-size="13" fill="#e0c0c4">Mail · Telegram · Discord</text>
+    <text x="200" y="754" text-anchor="middle" font-size="13" fill="#c87078">CLI · Calendar · Cron</text>
+  </g>
+
+  <!-- Comms 2: Claude Desktop — Anthropic App (x=340, mid=460) -->
+  <g>
+    <rect x="340" y="640" width="240" height="130" rx="12" fill="#261812" stroke="#c87a4e" stroke-width="1.5"/>
+    <text x="460" y="676" text-anchor="middle" font-size="20" font-weight="700" fill="#e09678">Claude Desktop</text>
+    <text x="460" y="700" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#888" letter-spacing="2">ANTHROPIC APP</text>
+    <text x="460" y="730" text-anchor="middle" font-size="13" fill="#e0d0c0">remote / server</text>
+    <text x="460" y="754" text-anchor="middle" font-size="13" fill="#a87858">sessions only</text>
+  </g>
+
+  <!-- Comms 3: Hermes — Telegram Group Chat, Mail (x=600, mid=720) -->
+  <g>
+    <rect x="600" y="640" width="240" height="130" rx="12" fill="#041c1c" stroke="#1A5B53" stroke-width="1.5"/>
+    <text x="720" y="676" text-anchor="middle" font-size="20" font-weight="700" fill="#5fdac8">Hermes</text>
+    <text x="720" y="700" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#888" letter-spacing="2">JOANNA · GATEWAY</text>
+    <text x="720" y="730" text-anchor="middle" font-size="13" fill="#b0d8d0">Telegram Group · Mail</text>
+    <text x="720" y="754" text-anchor="middle" font-size="13" fill="#3a8a82">Discord/Slack folgen</text>
+  </g>
+
+  <!-- Comms 4: Hermes lokal (x=860, mid=980, dashed) -->
+  <g>
+    <rect x="860" y="640" width="240" height="130" rx="12" fill="#041818" stroke="#1A5B53" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <text x="980" y="676" text-anchor="middle" font-size="20" font-weight="700" fill="#3a8a82">Hermes lokal</text>
+    <text x="980" y="700" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#888" letter-spacing="2">ANGEDACHT</text>
+    <text x="980" y="730" text-anchor="middle" font-size="13" fill="#7a9590">wie Hermes</text>
+    <text x="980" y="754" text-anchor="middle" font-size="13" fill="#5a7570">Telegram · Mail</text>
+  </g>
+
+  <!-- ═══ Footer-Caption (gleicher Abstand wie Header zum LLM-Container = 32 px) ═══ -->
+  <text x="740" y="850" text-anchor="middle" font-size="13" fill="#666" letter-spacing="1.5" font-style="italic">
+    LLMs feed Harnesses. Harnesses sprechen über den Vault. Comms sind das, was bei Sebastian ankommt.
+  </text>
+</svg>

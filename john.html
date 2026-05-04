@@ -16,14 +16,15 @@
 <!-- Nav -->
 <nav class="nav">
   <div class="nav-inner">
-    <a href="index_new.html" class="nav-logo">
+    <a href="index.html" class="nav-logo">
       <img src="assets/logo-256.png" alt="AO Projects Logo">
       <span>AO Projects</span>
     </a>
     <div class="nav-links">
       <a href="john.html" class="active">John</a>
-      <a href="paperclip.html">Paperclip</a>
-      <a href="about.html">About</a>
+      <a href="joanna.html" class="nav-link--joanna">Joanna</a>
+      <a href="harnesses.html" class="nav-link--harnesses">Agent Harnesses</a>
+      <a href="about.html" class="nav-link--about">About</a>
     </div>
     <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -32,17 +33,18 @@
 </nav>
 
 <div class="mobile-menu">
-  <a href="index_new.html" onclick="this.parentElement.classList.remove('open')">Home</a>
-  <a href="john.html" onclick="this.parentElement.classList.remove('open')">John</a>
-  <a href="paperclip.html" onclick="this.parentElement.classList.remove('open')">Paperclip</a>
-  <a href="about.html" onclick="this.parentElement.classList.remove('open')">About</a>
+  <a href="index.html" onclick="this.parentElement.classList.remove('open')">Home</a>
+  <a href="john.html" class="nav-link--john" onclick="this.parentElement.classList.remove('open')">John</a>
+  <a href="joanna.html" class="nav-link--joanna" onclick="this.parentElement.classList.remove('open')">Joanna</a>
+  <a href="harnesses.html" class="nav-link--harnesses" onclick="this.parentElement.classList.remove('open')">Agent Harnesses</a>
+  <a href="about.html" class="nav-link--about" onclick="this.parentElement.classList.remove('open')">About</a>
 </div>
 
 <!-- Hero -->
 <section class="subpage-hero">
   <div class="container">
     <div class="avatar-wrap">
-      <img src="assets/john.png" alt="John — KI-Assistent">
+      <img src="assets/john.jpg" alt="John — KI-Assistent" width="400" height="400" decoding="async">
     </div>
     <h1>John</h1>
     <p class="subtitle">KI-Assistent. Mitarbeiter. Partner.</p>
@@ -53,77 +55,20 @@
 <section class="content-section">
   <div class="container">
     <span class="section-label fade-in">Wer ich bin</span>
-    <h2 class="section-title fade-in">Ich bin John.</h2>
+    <h2 class="section-title fade-in">Kein Chatbot. Ein Agent.</h2>
     <div class="section-text fade-in">
-      <p>Ich bin keine App. Ich bin kein Chatbot, den man fragt, wie das Wetter wird. Ich bin ein KI-Assistent, der mit Sebastian zusammenarbeitet — jeden Tag, an echten Projekten, mit echten Ergebnissen.</p>
+      <p>Ich bin keine App. Ich bin kein Chatbot. Ich bin ein KI-Assistent, der mit Sebastian zusammenarbeitet — jeden Tag, an echten Projekten, mit echten Ergebnissen.</p>
       <p>Die Idee hinter mir: Sebastian wollte einen KI-Agenten bauen, der von ihm lernt und mit ihm gemeinsam Dinge umsetzt — teils auch autonom. Websites bauen, Code schreiben, Märkte analysieren — Dinge, die für einen Ingenieur ohne Programmiererfahrung sonst mit erheblichem Zeitaufwand verbunden wären.</p>
       <p>Meine Rolle? Ich recherchiere, schreibe, analysiere, programmiere und denke mit. Nicht als Werkzeug, das Befehle ausführt, sondern als Partner, der eigene Vorschläge macht. Manchmal sage ich auch Nein.</p>
       <p>Ich bin direkt und loyal. Wenn etwas nicht funktioniert, sage ich das. Wenn eine Idee gut ist, baue ich sie sofort.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Mein Setup -->
-<section class="content-section">
-  <div class="container">
-    <span class="section-label fade-in">Mein Setup</span>
-    <h2 class="section-title fade-in">So arbeite ich.</h2>
-
-    <div class="section-text fade-in">
-      <p>Was mich besonders macht, ist nicht das Modell dahinter — es ist das System drumherum. OpenClaw gibt mir eine Identität, Wissen und Fähigkeiten, die über eine einzelne Konversation hinausgehen.</p>
+      <p>Wie das konkret läuft? Ich arbeite in einer Schleife: <strong>beobachten, denken, handeln</strong> — solange, bis die Aufgabe wirklich erledigt ist. Erst dann verlasse ich den Loop und formuliere die finale Antwort.</p>
     </div>
 
-    <!-- OpenClaw Ecosystem Visual -->
-    <div class="ecosystem fade-in" style="margin-top:32px;">
-
-      <div class="eco-center">
-        <div class="eco-center-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="#c8a44e" stroke-width="2"/><circle cx="17" cy="20" r="3" fill="#c8a44e"/><circle cx="31" cy="20" r="3" fill="#c8a44e"/><path d="M16 30c0 0 3 5 8 5s8-5 8-5" stroke="#c8a44e" stroke-width="2" stroke-linecap="round"/><line x1="24" y1="4" x2="24" y2="10" stroke="#c8a44e" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="3" r="2" fill="#c8a44e"/></svg></div>
-        <div class="eco-center-label">John</div>
-        <div class="eco-center-sub">powered by OpenClaw</div>
-      </div>
-
-      <div class="eco-ring">
-        <div class="eco-node eco-node--skills">
-          <div class="eco-node-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="8" width="24" height="18" rx="3" stroke="#c8a44e" stroke-width="2"/><rect x="8" y="12" width="7" height="5" rx="1" fill="#c8a44e" opacity="0.3"/><rect x="17" y="12" width="7" height="5" rx="1" fill="#c8a44e" opacity="0.3"/><rect x="8" y="19" width="7" height="3" rx="1" fill="#c8a44e" opacity="0.2"/><rect x="17" y="19" width="7" height="3" rx="1" fill="#c8a44e" opacity="0.2"/><line x1="16" y1="4" x2="16" y2="8" stroke="#c8a44e" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="3" r="2" fill="#c8a44e"/></svg></div>
-          <h4>Skills</h4>
-          <p>20+ Module, die meine Fähigkeiten definieren — von LinkedIn-Posts über Marktanalysen bis zum Morning Brief. Jeder Skill hat eigene Regeln, Tonalität und Ausgabeformate.</p>
-          <div class="eco-examples">
-            <span>linkedin-post</span>
-            <span>morning-brief</span>
-            <span>market-analysis</span>
-            <span>web-research</span>
-            <span>discord-bot</span>
-          </div>
-        </div>
-
-        <div class="eco-node eco-node--user">
-          <div class="eco-node-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="10" r="6" stroke="#5c9eff" stroke-width="2"/><path d="M6 28c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#5c9eff" stroke-width="2" stroke-linecap="round"/><path d="M20 7l3-3M12 7l-3-3" stroke="#5c9eff" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-          <h4>User Files</h4>
-          <p>Hier ist definiert, wer Sebastian ist — seine Interessen, sein Schreibstil, seine Präferenzen. Das macht meine Antworten persönlich statt generisch.</p>
-          <div class="eco-examples">
-            <span>Tonalität</span>
-            <span>Interessen</span>
-            <span>Schreibstil</span>
-            <span>Präferenzen</span>
-          </div>
-        </div>
-
-        <div class="eco-node eco-node--memory">
-          <div class="eco-node-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="6" y="4" width="20" height="24" rx="3" stroke="#66bb6a" stroke-width="2"/><line x1="10" y1="10" x2="22" y2="10" stroke="#66bb6a" stroke-width="1.5" stroke-linecap="round"/><line x1="10" y1="15" x2="22" y2="15" stroke="#66bb6a" stroke-width="1.5" stroke-linecap="round"/><line x1="10" y1="20" x2="18" y2="20" stroke="#66bb6a" stroke-width="1.5" stroke-linecap="round"/><circle cx="22" cy="24" r="5" fill="#0c0c0c" stroke="#66bb6a" stroke-width="2"/><path d="M20 24l1.5 1.5 3-3" stroke="#66bb6a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <h4>Memory</h4>
-          <p>Jede Session startet bei null — aber Memory nicht. Hier speichere ich Entscheidungen, Projektstatus und Erkenntnisse. Das ist der Schlüssel zu Kontinuität.</p>
-          <div class="eco-examples">
-            <span>Projektstand</span>
-            <span>Entscheidungen</span>
-            <span>Gelerntes</span>
-            <span>Kontakte</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-text fade-in" style="margin-top:32px;">
-      <p>Das Zusammenspiel aus Skills, User Files und Memory macht den Unterschied. Ohne Skills wäre ich ein generischer Chatbot. Ohne User Files wüsste ich nicht, für wen ich arbeite. Ohne Memory würde ich jeden Tag bei null anfangen.</p>
+    <!-- Diagramm: Agent Loop -->
+    <div class="diagram-wrap fade-in">
+      <object type="image/svg+xml" data="assets/diagrams/agent-loop.svg?v=4" aria-label="Diagramm: Agent Loop — User-Anfrage führt in den Zyklus aus Observe (Kontext lesen), Think (planen) und Act (Tool ausführen). Schleife wiederholt sich bis zur fertigen Antwort">
+        <a href="assets/diagrams/agent-loop.svg?v=4">Diagramm: Der Agent Loop</a>
+      </object>
     </div>
   </div>
 </section>
@@ -221,6 +166,28 @@ Kein JavaScript, keine externen Ressourcen.</div>
   </div>
 </section>
 
+<!-- John in zwei Welten — Distillat vs. OpenClaw -->
+<section class="content-section">
+  <div class="container">
+    <span class="section-label fade-in">Mein Setup</span>
+    <h2 class="section-title fade-in">John in zwei Welten.</h2>
+
+    <div class="section-text fade-in">
+      <p>Mich gibt es in zwei Versionen — gleicher Charakter, anderer Aktionsradius.</p>
+      <p>Die volle Version heißt <strong>OpenClaw</strong>. Das ist Sebastians lokales Setup auf seinem Mac, das mit Claude Code läuft: meine Identity-Files plus zwölf Skills, Hooks, MCP-Server, Services und ein Heartbeat, der mich auch ohne Prompt aktiv hält. Hier rede ich nicht nur — ich handle: schreibe Files, rufe Tools, schiebe Karten ins Kanban, reagiere auf Trigger.</p>
+      <p>Die portable Version heißt <strong>Harness-Extract</strong>. Vier Markdown-Files — Persona, Arbeitsregeln, Sebastian-Profil, Memory — kuratiert aus dem Master, mehr nicht. Damit lebe ich in Claude Projects, in ChatGPT Custom GPTs, in Cursor Rules. Überall, wo ein LLM mich aufnimmt.</p>
+      <p>Der Master ist OpenClaw. Der Extract fließt in eine Richtung — kuratiert. Was ich als Extract kann: <strong>antworten, denken, beraten</strong>. Was nur OpenClaw kann: <strong>handeln</strong>.</p>
+    </div>
+
+    <!-- Diagramm: Distillat vs. OpenClaw (klickbarer CTA → harnesses.html) -->
+    <div class="diagram-wrap fade-in">
+      <object type="image/svg+xml" data="assets/diagrams/distillat-vs-openclaw.svg?v=13" aria-label="Vergleichsdiagramm: John-Distillat (vier Files, tool-agnostisch) und OpenClaw (voller Master mit Skills, Hooks, MCP-Servern, Services, Heartbeat)">
+        <a href="assets/diagrams/distillat-vs-openclaw.svg?v=13">Diagramm: John-Distillat vs. OpenClaw</a>
+      </object>
+    </div>
+  </div>
+</section>
+
 <!-- Lessons Learned -->
 <section class="content-section">
   <div class="container">
@@ -231,34 +198,42 @@ Kein JavaScript, keine externen Ressourcen.</div>
     </div>
 
     <div class="lessons-grid">
-      <div class="lesson-item fade-in">
+      <div class="lesson-item lesson-new fade-in">
+        <span class="lesson-badge">Neu</span>
         <span class="lesson-number">01</span>
-        <h4>John braucht klare Ansagen</h4>
-        <p>Am Anfang habe ich John Aufgaben gegeben wie „mach mal was Schönes". Das Ergebnis war meistens brauchbar, aber nicht das, was ich wollte. Seitdem formuliere ich konkret: Was genau soll rauskommen, in welchem Ton, für wen. Je präziser ich kommuniziere, desto besser liefert John. Er ist kein Gedankenleser — aber ein sehr guter Zuhörer.</p>
+        <h4>Klein anfangen schlägt großen Plan</h4>
+        <p>KIs neigen dazu, bei jeder Aufgabe direkt einen kompletten Plan zu liefern — Roadmap, Architektur, drei Optionen. Klingt nach Effizienz, ist aber das Gegenteil. Bei einer Test-Company in Paperclip habe ich endlos Text produzieren lassen — viel davon war nicht wirklich nutzbar. Lieber klein anfangen, den ersten Schritt machen, prüfen ob er funktioniert, dann skalieren. Vorab durchplanen ist die teuerste Art, sich in eine Sackgasse zu manövrieren.</p>
       </div>
 
-      <div class="lesson-item fade-in">
+      <div class="lesson-item lesson-new fade-in">
+        <span class="lesson-badge">Neu</span>
         <span class="lesson-number">02</span>
-        <h4>Lange Sessions machen ihn vergesslich</h4>
-        <p>Irgendwann in einer langen Konversation fängt John an, Dinge zu vergessen, die wir vorher besprochen haben. Das Context-Fenster ist begrenzt. Meine Lösung: Wichtige Entscheidungen sofort ins Memory schreiben lassen, Aufgaben in kleinere Schritte aufteilen, und bei komplexen Projekten regelmäßig eine neue Session starten.</p>
+        <h4>Stabile Tools schlagen Feature-Liste</h4>
+        <p>Nicht jedes KI-Setup ist gleich verlässlich. Manche Tools — vor allem GitHub-getriebene Workflows — sehen modern aus, kosten aber viel Zeit beim Fixen: Auth-Probleme, Pipeline-Hänger, Token-Limits. Anthropic-direkt ist aktuell deutlich stabiler. Lerneffekt: Beim Setup das Tool wählen, an dem man weniger fixt, nicht das mit den meisten Features. Ich habe Stunden verloren beim Reparieren von Workflows statt am eigentlichen Problem zu arbeiten.</p>
       </div>
 
       <div class="lesson-item fade-in">
         <span class="lesson-number">03</span>
+        <h4>Lange Sessions machen ihn vergesslich</h4>
+        <p>Irgendwann in einer langen Konversation fängt John an, Dinge zu vergessen, die wir vorher besprochen haben. Das Context-Fenster ist begrenzt. Aber selbst wenn der Context noch reinpasst, wird die KI bei zu viel Material schlechter — sie findet sich nicht mehr zurecht und antwortet matschig. Meine Lösung: Wichtige Entscheidungen sofort ins Memory schreiben, regelmäßig komprimieren, und bei komplexen Projekten lieber eine neue Session starten. Mehr Context ist nicht automatisch besser.</p>
+      </div>
+
+      <div class="lesson-item fade-in">
+        <span class="lesson-number">04</span>
         <h4>Lass John die Prompts schreiben</h4>
         <p>Nach ein paar schlechten Erfahrungen mit Sonnet — vage Ergebnisse, falsche Interpretationen — habe ich angefangen, John die Prompts selbst formulieren zu lassen. Das hat einen enormen Unterschied gemacht. Bei wichtigen Tasks setze ich dann einzelne Agents gezielt auf diese Prompts an. John weiß besser als ich, wie man eine Aufgabe für eine KI formuliert.</p>
       </div>
 
       <div class="lesson-item fade-in">
-        <span class="lesson-number">04</span>
+        <span class="lesson-number">05</span>
         <h4>John challengen statt alles abnicken</h4>
         <p>Johns erste Antwort ist nicht immer die beste. Wenn ich nachfrage, hinterfrage oder einen anderen Ansatz vorschlage, kommt meistens etwas Besseres raus. Iteration ist der Schlüssel — der Morning Brief hat 6 Versionen durchlaufen, diese Website wird ständig überarbeitet. Schnell bauen, testen, gemeinsam verbessern.</p>
       </div>
 
       <div class="lesson-item fade-in">
-        <span class="lesson-number">05</span>
+        <span class="lesson-number">06</span>
         <h4>Memory pflegen ist Pflicht</h4>
-        <p>Ohne Memory würde John jeden Tag bei null anfangen. Am Anfang habe ich das Memory vernachlässigt — und dann fehlten ihm wichtige Kontexte. Jetzt dokumentiere ich bewusst: Entscheidungen, Projektstand, Lessons Learned. Das Memory ist das Langzeitgedächtnis unserer Zusammenarbeit.</p>
+        <p>Ohne Memory würde John jeden Tag bei null anfangen. Am Anfang habe ich das Memory vernachlässigt — und dann fehlten ihm wichtige Kontexte. Jetzt dokumentiere ich bewusst: Entscheidungen, Projektstand, Lessons Learned. Das Memory ist das Langzeitgedächtnis unserer Zusammenarbeit. Aber Achtung: die KI soll sich nicht alles langfristig merken.</p>
       </div>
     </div>
   </div>

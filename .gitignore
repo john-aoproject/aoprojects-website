@@ -1,2 +1,6 @@
 .DS_Store
 Icon?
+
+# local working files
+excalidraw.log
+_sketches/
