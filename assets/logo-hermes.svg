@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Hermes Logo (Caduceus)">
   <title>Hermes — Caduceus</title>
   <!-- Caduceus stilisiert: Stab + zwei Schlangen + Flügel-Andeutung -->
-  <g transform="translate(32, 32)" stroke="#045652" stroke-width="3" stroke-linecap="round" fill="none">
+  <g transform="translate(32, 32)" stroke="#1A5B53" stroke-width="3" stroke-linecap="round" fill="none">
     <!-- Stab (vertikal) -->
     <line x1="0" y1="-22" x2="0" y2="22"/>
     <!-- Linke Schlange -->

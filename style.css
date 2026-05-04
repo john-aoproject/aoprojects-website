@@ -518,12 +518,12 @@ section { padding: 60px 0; }
   animation: lesson-float 7s ease-in-out infinite -1.75s;
 }
 .harness-card--hermes {
-  border-top-color: #045652;
+  border-top-color: #1A5B53;
   box-shadow:
     0 1px 2px rgba(0, 0, 0, 0.35),
     0 6px 16px rgba(0, 0, 0, 0.40),
     0 16px 36px rgba(0, 0, 0, 0.45),
-    0 0 28px 2px rgba(4, 86, 82, 0.35);
+    0 0 28px 2px rgba(26, 91, 83, 0.35);
   animation: lesson-float 7s ease-in-out infinite -3.5s;
 }
 .harness-card--lavender {
@@ -586,7 +586,7 @@ section { padding: 60px 0; }
   color: #ffffff;
 }
 .harness-badge--hermes {
-  background: linear-gradient(135deg, #5fdac8 0%, #045652 100%);
+  background: linear-gradient(135deg, #5fdac8 0%, #1A5B53 100%);
   color: #041c1c;
 }
 
@@ -645,7 +645,7 @@ section { padding: 60px 0; }
 .harness-card--gold .harness-bullets li::before      { background: #c8a44e; }
 .harness-card--openclaw .harness-bullets li::before  { background: #e81b25; }
 .harness-card--anthropic .harness-bullets li::before { background: #c87a4e; }
-.harness-card--hermes .harness-bullets li::before    { background: #045652; }
+.harness-card--hermes .harness-bullets li::before    { background: #1A5B53; }
 .harness-card--lavender .harness-bullets li::before  { background: #b3a2ff; }
 .harness-card--neutral .harness-bullets li::before   { background: #5a6573; }
 

@@ -99,7 +99,7 @@
 
   <!-- Harness 3: Hermes (x=600, w=240, mid=720, GRÜN-TEAL) -->
   <g>
-    <rect x="600" y="300" width="240" height="150" rx="12" fill="#041c1c" stroke="#045652" stroke-width="2.5"/>
+    <rect x="600" y="300" width="240" height="150" rx="12" fill="#041c1c" stroke="#1A5B53" stroke-width="2.5"/>
     <text x="720" y="334" text-anchor="middle" font-size="20" font-weight="700" fill="#5fdac8">Hermes</text>
     <text x="720" y="358" text-anchor="middle" font-size="13" fill="#3a8a82" letter-spacing="0.5">Agent Joanna</text>
     <line x1="630" y1="378" x2="810" y2="378" stroke="#0a3030" stroke-width="1"/>
@@ -110,7 +110,7 @@
 
   <!-- Harness 4: Hermes lokal (x=860, w=240, mid=980, GRÜN dashed) -->
   <g>
-    <rect x="860" y="300" width="240" height="150" rx="12" fill="#041818" stroke="#045652" stroke-width="2" stroke-dasharray="6 4"/>
+    <rect x="860" y="300" width="240" height="150" rx="12" fill="#041818" stroke="#1A5B53" stroke-width="2" stroke-dasharray="6 4"/>
     <text x="980" y="334" text-anchor="middle" font-size="20" font-weight="700" fill="#3a8a82">Hermes lokal</text>
     <text x="980" y="358" text-anchor="middle" font-size="11" fill="#5a7570" letter-spacing="2">ANGEDACHT</text>
     <line x1="890" y1="378" x2="1070" y2="378" stroke="#0a2828" stroke-width="1"/>
@@ -164,7 +164,7 @@
 
   <!-- Comms 3: Hermes — Telegram Group Chat, Mail (x=600, mid=720) -->
   <g>
-    <rect x="600" y="640" width="240" height="130" rx="12" fill="#041c1c" stroke="#045652" stroke-width="1.5"/>
+    <rect x="600" y="640" width="240" height="130" rx="12" fill="#041c1c" stroke="#1A5B53" stroke-width="1.5"/>
     <text x="720" y="676" text-anchor="middle" font-size="20" font-weight="700" fill="#5fdac8">Hermes</text>
     <text x="720" y="700" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#888" letter-spacing="2">JOANNA · GATEWAY</text>
     <text x="720" y="730" text-anchor="middle" font-size="13" fill="#b0d8d0">Telegram Group · Mail</text>
@@ -173,7 +173,7 @@
 
   <!-- Comms 4: Hermes lokal (x=860, mid=980, dashed) -->
   <g>
-    <rect x="860" y="640" width="240" height="130" rx="12" fill="#041818" stroke="#045652" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <rect x="860" y="640" width="240" height="130" rx="12" fill="#041818" stroke="#1A5B53" stroke-width="1.5" stroke-dasharray="6 4"/>
     <text x="980" y="676" text-anchor="middle" font-size="20" font-weight="700" fill="#3a8a82">Hermes lokal</text>
     <text x="980" y="700" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#888" letter-spacing="2">ANGEDACHT</text>
     <text x="980" y="730" text-anchor="middle" font-size="13" fill="#7a9590">wie Hermes</text>
