@@ -21,10 +21,10 @@
       <span>AO Projects</span>
     </a>
     <div class="nav-links">
-      <a href="john.html">John</a>
+      <a href="john.html" class="nav-link--john">John</a>
       <a href="joanna.html" class="active">Joanna</a>
-      <a href="harnesses.html">Agent Harnesses</a>
-      <a href="about.html">About</a>
+      <a href="harnesses.html" class="nav-link--harnesses">Agent Harnesses</a>
+      <a href="about.html" class="nav-link--about">About</a>
     </div>
     <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -34,10 +34,10 @@
 
 <div class="mobile-menu">
   <a href="index.html" onclick="this.parentElement.classList.remove('open')">Home</a>
-  <a href="john.html" onclick="this.parentElement.classList.remove('open')">John</a>
-  <a href="joanna.html" onclick="this.parentElement.classList.remove('open')">Joanna</a>
-  <a href="harnesses.html" onclick="this.parentElement.classList.remove('open')">Agent Harnesses</a>
-  <a href="about.html" onclick="this.parentElement.classList.remove('open')">About</a>
+  <a href="john.html" class="nav-link--john" onclick="this.parentElement.classList.remove('open')">John</a>
+  <a href="joanna.html" class="nav-link--joanna" onclick="this.parentElement.classList.remove('open')">Joanna</a>
+  <a href="harnesses.html" class="nav-link--harnesses" onclick="this.parentElement.classList.remove('open')">Agent Harnesses</a>
+  <a href="about.html" class="nav-link--about" onclick="this.parentElement.classList.remove('open')">About</a>
 </div>
 
 <!-- Hero: Avatar im Lavendel-Rahmen (analog zu john.html) -->

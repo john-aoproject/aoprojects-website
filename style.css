@@ -92,7 +92,13 @@ section { padding: 60px 0; }
 .nav-logo span { font-weight: 700; font-size: 1rem; color: var(--text); }
 .nav-links { display: flex; gap: 24px; }
 .nav-links a { font-size: 0.9rem; color: var(--muted); transition: color 0.2s; }
-.nav-links a:hover, .nav-links a.active { color: var(--accent); }
+.nav-links a:hover, .nav-links a.active { color: var(--link-accent, var(--accent)); }
+
+/* Per-Link Identity-Color (gilt überall, unabhängig von Page-Theme) */
+.nav-link--john     { --link-accent: #FFC4A8; }
+.nav-link--joanna   { --link-accent: #b3a2ff; }
+.nav-link--harnesses { --link-accent: #c8a44e; }
+.nav-link--about    { --link-accent: #ffffff; }
 
 /* Hamburger */
 .hamburger {
@@ -130,7 +136,7 @@ section { padding: 60px 0; }
   pointer-events: auto;
 }
 .mobile-menu a { font-size: 1.2rem; color: var(--text); }
-.mobile-menu a:hover { color: var(--accent); }
+.mobile-menu a:hover, .mobile-menu a.active { color: var(--link-accent, var(--accent)); }
 
 /* ===== Intro-Video (Hub) ===== */
 .intro-video-section {
@@ -248,7 +254,7 @@ section { padding: 60px 0; }
   color: var(--muted); font-size: 0.9rem; transition: color 0.2s;
   display: flex; align-items: center; gap: 6px;
 }
-.footer-links a:hover { color: var(--accent); }
+.footer-links a:hover { color: var(--gold); }
 .footer-copy { font-size: 0.8rem; color: var(--muted); opacity: 0.6; }
 
 /* ===== Subpage Hero ===== */
