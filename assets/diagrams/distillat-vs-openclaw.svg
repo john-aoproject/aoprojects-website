@@ -182,10 +182,8 @@
     <!-- Pille -->
     <rect class="cta-bg" x="320" y="1216" width="600" height="68" rx="34"
           fill="#1a1310" stroke="#FFC4A8" stroke-width="2.5"/>
-    <!-- Großer Label-Text — Agent Harnesses + animierter Pfeil, beide separat zentriert
-         Block-Berechnung: "Agent Harnesses" 32 Bold ~257 px, Gap 20, Pfeil 34 ~30
-         → Block-Breite 307, Block zentriert bei Pille-Mitte 620 -->
-    <text x="595" y="1268" text-anchor="middle" font-size="32" font-weight="700" fill="#FFC4A8" letter-spacing="0.3">Agent Harnesses</text>
-    <text class="cta-arrow" x="759" y="1268" text-anchor="middle" font-size="34" font-weight="700" fill="#FFC4A8">→</text>
+    <!-- Label + animierter Pfeil als ein zentrierter Block
+         (Browser layoutet automatisch um Pille-Mitte 620 — robust gegen Font-Metric-Varianten) -->
+    <text x="620" y="1268" text-anchor="middle" font-size="32" font-weight="700" fill="#FFC4A8" letter-spacing="0.3">Agent Harnesses<tspan class="cta-arrow" dx="18" font-size="34">→</tspan></text>
   </a>
 </svg>
